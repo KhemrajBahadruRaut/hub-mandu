@@ -61,7 +61,7 @@ export default function MandhuHub() {
     </div>
 
     {/* Tomato slot */}
-    <div className="absolute top-10 left-5 sm:top-10 sm:left-7.5  w-19 h-19 sm:w-23 sm:h-23 md:w-28 md:h-28 lg:w-36 lg:h-36 md:top-11.25 xl:top-1 md:left-10 lg:-left-8 lg:top-5 xl:left-20 2xl:left-60 rounded-full">
+    <div className="absolute top-6 sm:top-10 sm:left-7.5  w-19 h-19 sm:w-23 sm:h-23 md:w-28 md:h-28 lg:w-36 lg:h-36 md:top-11.25 xl:top-1 md:left-10 lg:-left-8 lg:top-5 xl:left-20 2xl:left-60 rounded-full">
       <Image
         src="/main-png/4.png"
         alt="Tomato"
