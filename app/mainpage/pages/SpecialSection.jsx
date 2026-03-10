@@ -5,7 +5,7 @@ const SpecialSection = () => {
      <section className="w-full bg-white px-8 py-12 flex items-center justify-between gap-10 flex-wrap md:flex-nowrap">
 
       {/* LEFT CONTENT */}
-      <div className="flex-1 min-w-70 max-w-130">
+      <div className="flex-1 min-w-70 max-w-180">
 
         {/* Tag */}
         <p className="text-[#D84315] text-sm font-semibold mb-3 tracking-wide">
@@ -13,7 +13,7 @@ const SpecialSection = () => {
         </p>
 
         {/* Heading */}
-        <h2 className="text-[38px] md:text-[42px] font-normal leading-[1.2] text-[#1a1a1a] mb-4" >
+        <h2 className="text-[38px] md:text-[50px] font-normal leading-[1.2] text-[#1a1a1a] mb-4" >
           Discover{" "}
           <span className="text-[#D84315] font-semibold">great value</span>. Explore our
           current{" "}
@@ -47,15 +47,8 @@ const SpecialSection = () => {
       </div>
 
       {/* RIGHT - Image Slot */}
-      <div className="flex-1 min-w-70 max-w-140 rounded-tl-[40px] rounded-br-[40px] h-70 md:h-90 overflow-hidden bg-gray-100 flex items-center justify-center relative">
-        {/* Replace with your image:
-        */}
-        <img src="/specialsection/i1.jpg" alt="Burger and Fries" className="w-full h-full object-fit" />
-        {/* <div className="text-center text-gray-400 pointer-events-none select-none">
-          <span className="text-5xl block mb-2">🍔</span>
-          <p className="text-sm font-medium">Food Image</p>
-          <p className="text-xs mt-1 opacity-70">560×320px · rounded</p>
-        </div> */}
+      <div className="flex-1 min-w-40 max-w-140 rounded-tl-[40px] rounded-br-[40px] h-70 md:h-90 overflow-hidden bg-gray-100 flex items-center justify-center relative">
+        <img src="/specialsection/i1.jpg" alt="Burger and Fries" className="w-full h-full md:object-cover object-fit" />
       </div>
 
     </section>
