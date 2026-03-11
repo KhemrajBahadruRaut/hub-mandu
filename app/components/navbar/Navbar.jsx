@@ -1,58 +1,68 @@
 "use client";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
-const NAV_LINKS = ["Home", "About", "Menu", "Careers", "Blogs"];
+const NAV_LINKS = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Menu", href: "/menu" },
+  { label: "Careers", href: "/careers" },
+  { label: "Blogs", href: "/blogs" },
+];
 
 export default function Navbar() {
-  const [active, setActive] = useState("Home");
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const isActive = (href) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   return (
     <nav className="relative flex z-100 items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 py-4 bg-white shadow-sm">
       {/* Logo */}
-      <a
+      <Link
         href="/"
         className="text-lg sm:text-xl text-gray-900 tracking-wide z-20"
         style={{ fontFamily: "Georgia, serif" }}
       >
         Mandu <span className="font-bold">HUB</span>
-      </a>
+      </Link>
 
       {/* Desktop Nav Links */}
       <ul className="hidden lg:flex items-center gap-9 list-none m-0 p-0">
         {NAV_LINKS.map((link) => (
-          <li key={link}>
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                setActive(link);
-              }}
+          <li key={link.label}>
+            <Link
+              href={link.href}
               className={`relative text-sm pb-1 transition-colors duration-200 group no-underline ${
-                active === link
+                isActive(link.href)
                   ? "text-[#D84315] font-semibold"
                   : "text-gray-600 hover:text-[#D84315]"
               }`}
             >
-              {link}
+              {link.label}
               <span
                 className={`absolute bottom-0 left-0 h-0.5 rounded-full bg-[#D84315] transition-all duration-300 ${
-                  active === link ? "w-full" : "w-0 group-hover:w-full"
+                  isActive(link.href) ? "w-full" : "w-0 group-hover:w-full"
                 }`}
               />
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
 
       {/* Desktop Contact Button */}
-      <button
+      <Link
+        href="/contact"
         className="hidden lg:block border border-[#D84315] text-[#D84315] text-sm font-medium px-5 py-2 rounded-md
-          transition-all duration-200 hover:bg-[#D84315] hover:text-white hover:-translate-y-0.5 cursor-pointer bg-transparent"
+          transition-all duration-200 hover:bg-[#D84315] hover:text-white hover:-translate-y-0.5 cursor-pointer bg-transparent no-underline"
       >
         Contact us
-      </button>
+      </Link>
 
       {/* Mobile Menu Button */}
       <button
@@ -71,37 +81,35 @@ export default function Navbar() {
       >
         <ul className="flex flex-col items-start gap-5 list-none m-0 p-5 sm:p-6">
           {NAV_LINKS.map((link) => (
-            <li key={link} className="w-full">
-              <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setActive(link);
-                  setMenuOpen(false);
-                }}
+            <li key={link.label} className="w-full">
+              <Link
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
                 className={`relative inline-block text-sm pb-1 transition-colors duration-200 group no-underline ${
-                  active === link
+                  isActive(link.href)
                     ? "text-[#D84315] font-semibold"
                     : "text-gray-600 hover:text-[#D84315]"
                 }`}
               >
-                {link}
+                {link.label}
                 <span
                   className={`absolute bottom-0 left-0 h-0.5 rounded-full bg-[#D84315] transition-all duration-300 ${
-                    active === link ? "w-full" : "w-0 group-hover:w-full"
+                    isActive(link.href) ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 />
-              </a>
+              </Link>
             </li>
           ))}
 
           <li className="w-full pt-2">
-            <button
-              className="w-full border border-[#D84315] text-[#D84315] text-sm font-medium px-5 py-2 rounded-md
-                transition-all duration-200 hover:bg-[#D84315] hover:text-white cursor-pointer bg-transparent"
+            <Link
+              href="/contact"
+              onClick={() => setMenuOpen(false)}
+              className="block w-full text-center border border-[#D84315] text-[#D84315] text-sm font-medium px-5 py-2 rounded-md
+                transition-all duration-200 hover:bg-[#D84315] hover:text-white cursor-pointer bg-transparent no-underline"
             >
               Contact us
-            </button>
+            </Link>
           </li>
         </ul>
       </div>
