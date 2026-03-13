@@ -7,6 +7,10 @@ import Image from "next/image";
 import { LogOut, Menu, X} from "lucide-react";
 import { MenuIcon } from "lucide-react";
 import { LayoutDashboard } from "lucide-react";
+import { Contact2Icon } from "lucide-react";
+import { LucideWorkflow } from "lucide-react";
+import { LucideBluetoothSearching } from "lucide-react";
+import { PackagePlus } from "lucide-react";
 
 export default function AdminLayout({ children }) {
   const router = useRouter();
@@ -73,7 +77,9 @@ export default function AdminLayout({ children }) {
          
           <SidebarItem icon={<LayoutDashboard size={20} />} text="dashboard" href="/admin/dashboard" active={pathname === "/admin/dashboard"} />
           <SidebarItem icon={<MenuIcon size={20} />} text="menu" href="/admin/menu-table" active={pathname === "/admin/menu-table"} />
-    
+          <SidebarItem icon={<Contact2Icon size={20} />} text="contact" href="/admin/contacts-table" active={pathname === "/admin/contacts-table"} />
+          <SidebarItem icon={<LucideWorkflow size={20} />} text="career" href="/admin/admin-career" active={pathname === "/admin/admin-career"} />
+          <SidebarItem icon={<PackagePlus size={20} />} text="blogs" href="/admin/admin-blogs" active={pathname === "/admin/admin-blogs"} />
         </nav>
 
         <div className="p-4 border-t border-slate-800">
