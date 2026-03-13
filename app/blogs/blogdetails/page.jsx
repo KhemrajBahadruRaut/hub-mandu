@@ -111,7 +111,7 @@ export default async function BlogDetails({ searchParams, params }) {
 
   return (
     <>
-      <div className="bg-[#1E1E1E] text-white  px-4 sm:px-6 md:px-8 pt-26 sm:pt-8 md:pt-30 min-h-screen">
+      <div className=" text-black  px-4 sm:px-6 md:px-8 pt-26 sm:pt-8 md:pt-30 min-h-screen">
         <article className="max-w-4xl mx-auto">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-4 sm:mb-6">
             {blog.title}
@@ -131,13 +131,13 @@ export default async function BlogDetails({ searchParams, params }) {
 
           <time
             dateTime={blog.created_at}
-            className="text-gray-400 mb-6 sm:mb-8 md:mb-10 block text-xs sm:text-sm"
+            className="text-gray-800 mb-6 sm:mb-8 md:mb-10 block text-xs sm:text-sm"
           >
             {new Date(blog.created_at).toDateString()}
           </time>
 
           <div
-            className="blog-content text-gray-300 leading-7 sm:leading-8 text-sm sm:text-base"
+            className="blog-content text-gray-800 leading-7 sm:leading-8 text-sm sm:text-base"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
         </article>
