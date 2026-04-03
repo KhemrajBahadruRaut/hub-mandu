@@ -5,11 +5,13 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Calendar } from "lucide-react";
-import Skeleton
- from "../components/ui/Skeleton";
+import Skeleton from "../components/ui/Skeleton";
+import { ArrowBigDown } from "lucide-react";
+import { ArrowBigRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 const API_BASE =
   process.env.NEXT_PUBLIC_API_BASE || "http://localhost/manduhub_backend";
-// const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://api.himalayanthakali.com/himalayanthakali_backend";
+// const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://api.hubmandu.com/himalayanthakali_backend";
 
 function BlogCardSkeleton() {
   return (
@@ -70,11 +72,11 @@ const BlogListingPage = () => {
             </div>
 
             <h1 className="mb-4 text-2xl text-black sm:text-4xl font-serif md:text-5xl">
-              Latest <span className="text-[#D84315]">Blogs</span> & <span className="text-[#D84315]">Articles</span>
+              Latest <span className="text-[#D84315]">Blogs</span> &{" "}
+              <span className="text-[#D84315]">Articles</span>
             </h1>
             <p className="mx-auto max-w-2xl text-gray-400">
-              Discover our latest stories, updates, and events from Himalayan
-              Thakali.
+              Discover our latest stories, updates, and events from Mandu Hub.
             </p>
           </header>
 
@@ -97,7 +99,7 @@ const BlogListingPage = () => {
           </div>
 
           <section
-            className="grid grid-cols-1 gap-18 md:grid-cols-2 lg:grid-cols-3"
+            className="grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-3 mb-10"
             aria-label="Blog posts"
           >
             {isLoading
@@ -112,11 +114,11 @@ const BlogListingPage = () => {
                       aria-label={`Read blog post: ${post.title}`}
                     >
                       <div className="relative h-full overflow-hidden transition-all duration-300">
-                        <div className="absolute h-50 w-50 border-l-2 border-t-2 border-[#D97634]" />
-                        <div className="absolute bottom-0 right-0 h-50 w-50 border-b-2 border-r-2 border-[#D97634]" />
+                        {/* <div className="absolute h-50 w-50 border-l-2 border-t-2 border-[#D97634]" />
+                        <div className="absolute bottom-0 right-0 h-50 w-50 border-b-2 border-r-2 border-[#D97634]" /> */}
 
-                        <div className="m-7 flex h-full flex-col">
-                          <div className="relative h-60 shrink-0 overflow-hidden">
+                        <div className=" flex h-full flex-col border border-gray-200 rounded-tl-[60px] rounded-br-[60px]">
+                          <div className="relative h-60 shrink-0 overflow-hidden rounded-tl-[60px] rounded-br-[60px] ">
                             <Image
                               src={`${API_BASE}/${post.image}`}
                               alt={post.title || "Blog image"}
@@ -125,26 +127,29 @@ const BlogListingPage = () => {
                               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
                           </div>
+                          <div className="flex pt-4 ">
+                            <div className="flex items-center gap-2 text-sm text-gray-600">
+                              <Calendar
+                                className="h-4 w-4"
+                                aria-hidden="true"
+                              />
+                              <time dateTime={post.created_at}>
+                                {new Date(post.created_at).toDateString()}
+                              </time>
+                            </div>
+                          </div>
 
                           <div className="grow p-4">
-                            <h2 className="mb-3 line-clamp-2 text-lg font-semibold text-white transition-colors group-hover:text-amber-600">
+                            <h2 className="mb-3 line-clamp-2 text-lg font-semibold text-[#D97634] transition-colors group-hover:text-amber-600">
                               {post.title}
                             </h2>
 
-                            <p className="mb-4 min-h-18 line-clamp-3 text-sm text-gray-400">
+                            <p className="mb-2 min-h-16 line-clamp-3 text-sm text-gray-500 ">
                               {post.short_description || post.description}
                             </p>
-
-                            <div className="flex justify-end">
-                              <div className="flex items-center gap-2 text-sm text-gray-500">
-                                <Calendar
-                                  className="h-4 w-4"
-                                  aria-hidden="true"
-                                />
-                                <time dateTime={post.created_at}>
-                                  {new Date(post.created_at).toDateString()}
-                                </time>
-                              </div>
+                            <div className="text-[#D97634] flex items-center gap-2 hover:text-amber-600 hover:translate-x-2 transition-all duration-300 cursor-pointer">
+                              learn more
+                              <ArrowRight />
                             </div>
                           </div>
                         </div>

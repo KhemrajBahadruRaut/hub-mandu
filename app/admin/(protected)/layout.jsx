@@ -9,7 +9,6 @@ import { MenuIcon } from "lucide-react";
 import { LayoutDashboard } from "lucide-react";
 import { Contact2Icon } from "lucide-react";
 import { LucideWorkflow } from "lucide-react";
-import { LucideBluetoothSearching } from "lucide-react";
 import { PackagePlus } from "lucide-react";
 
 export default function AdminLayout({ children }) {
