@@ -76,7 +76,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={`absolute top-full left-0 w-full bg-white shadow-md border-t lg:hidden transition-all duration-300 overflow-hidden ${
-          menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          menuOpen ? "max-h-125 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <ul className="flex flex-col items-start gap-5 list-none m-0 p-5 sm:p-6">
