@@ -116,7 +116,7 @@ const MenuPage = () => {
       <div className=" text-white">
         <div className="flex flex-col lg:flex-row">
           <aside className="w-full border-b border-gray-800 p-4 pt-20 lg:w-64  lg:border-b-0">
-            <h2 className="mb-4 text-center lg:mb-6 text-[#D97634] text-lg tracking-[0.1em] font-bold">
+            <h2 className="mb-4 text-center lg:mb-6 text-[#D97634] text-lg tracking-widest font-bold">
               MENU
             </h2>
 
@@ -296,8 +296,6 @@ const MenuPage = () => {
             </div>
           )}
         </div>
-
-        <div className="pt-10"></div>
       </div>
     </>
   );
