@@ -13,7 +13,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
   return (
     <>
       {!isAdminPath && <Navbar />}
-      {children}
+        {children}
       {!isAdminPath && <Footer />}
     </>
   );

@@ -62,7 +62,7 @@ export default function FavouritesSection() {
   const visible = DISHES.slice(startIndex, startIndex + VISIBLE);
 
   return (
-    <section className="w-full bg-[#FDF6F0] py-14 px-6 md:px-12">
+    <section className="w-full bg-[#FDF6F0] sm:py-14 px-6 md:px-12">
       {/* Section Header */}
       <div className="text-center mb-10">
         <h2 className="text-[32px] md:text-[36px] font-normal text-[#1a1a1a]">
@@ -133,7 +133,7 @@ export default function FavouritesSection() {
       </div>
 
       {/* View Our Menu Button */}
-      <div className="flex justify-center">
+      <div className="flex justify-center pb-5">
         <button className="border border-[#D84315] text-[#D84315] bg-transparent px-12 py-3 rounded-tl-2xl rounded-br-2xl text-sm font-medium flex items-center gap-2 hover:bg-[#D84315] hover:text-white transition-all duration-200 cursor-pointer">
           View Our Menu <span>→</span>
         </button>
