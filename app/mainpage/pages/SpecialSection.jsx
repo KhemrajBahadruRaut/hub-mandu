@@ -5,7 +5,7 @@ const SpecialSection = () => {
      <section className="w-full bg-white px-8 py-12 flex items-center justify-between gap-10 flex-wrap md:flex-nowrap">
 
       {/* LEFT CONTENT */}
-      <div className="flex-1 min-w-70 max-w-180">
+      <div className="flex-1 min-w-50 max-w-180">
 
         {/* Tag */}
         <p className="text-[#D84315] text-sm font-semibold mb-3 tracking-wide">
@@ -13,7 +13,7 @@ const SpecialSection = () => {
         </p>
 
         {/* Heading */}
-        <h2 className="text-[38px] md:text-[50px] font-normal leading-[1.2] text-[#1a1a1a] mb-4" >
+        <h2 className="text-[23px] md:text-[50px] font-normal leading-[1.2] text-[#1a1a1a]  mb-4" >
           Discover{" "}
           <span className="text-[#D84315] font-semibold">great value</span>. Explore our
           current{" "}
@@ -29,7 +29,7 @@ const SpecialSection = () => {
         </p>
 
         {/* Description */}
-        <p className="text-sm text-[#555] leading-[1.75] mb-6 max-w-105">
+        <p className="text-sm text-[#555] leading-[1.75] mb-6 max-w-105 text-justify">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
           veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -47,7 +47,7 @@ const SpecialSection = () => {
       </div>
 
       {/* RIGHT - Image Slot */}
-      <div className="flex-1 min-w-40 max-w-140 rounded-tl-[40px] rounded-br-[40px] h-70 md:h-90 overflow-hidden bg-gray-100 flex items-center justify-center relative">
+      <div className="flex-1 min-w-50 max-w-140 rounded-tl-[40px] rounded-br-[40px] h-50 sm:h-60 md:h-90 overflow-hidden bg-gray-100 flex items-center justify-center relative">
         <img src="/specialsection/i1.jpg" alt="Burger and Fries" className="w-full h-full md:object-cover object-fit" />
       </div>
 
