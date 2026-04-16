@@ -113,7 +113,7 @@ export default function ContactPage() {
   return (
     <>
       <div className="px-4 sm:px-6 lg:px-8 pt-16 lg:pt-30 flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center items-center lg:items-start">
-         <div className="flex-shrink-0 pt-1 w-full max-w-[300px]">
+         <div className="shrink-0 pt-1 w-full max-w-75">
           {/* Eyebrow */}
           <p
             className="text-xs font-sans font-semibold tracking-widest uppercase mb-2"
@@ -165,7 +165,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="pb-6 sm:pb-8 md:pb-10 w-full max-w-[500px]">
+        <div className="pb-6 sm:pb-8 md:pb-10 w-full max-w-125">
           {/* Toast Notification */}
           {toast.visible && (
             <div
@@ -199,7 +199,7 @@ export default function ContactPage() {
                 aria-label="Contact form"
               >
                 <div className="relative">
-                  <fieldset className="group rounded-lg border border-zinc-600 px-2.5 py-1 transition-all focus-within:border-dashed focus-within:border-[#D97634]">
+                  <fieldset className="group rounded-xl border border-zinc-400 px-1.5 transition-all focus-within:border-dashed focus-within:border-[#D97634]">
                     <legend className="px-2 text-xs tracking-wider text-[#D97634] uppercase">
                       Full Name
                     </legend>
@@ -209,7 +209,7 @@ export default function ContactPage() {
                       value={formData.fullName}
                       onChange={handleChange}
                       autoComplete="name"
-                      className="mb-1.5 w-full rounded-md  border-gray-400 border px-4 py-2 text-black placeholder-gray-500 focus:outline-none"
+                      className="mb-1.5 w-full rounded-lg  border-gray-400 border px-4 py-1 text-black placeholder-gray-500 focus:outline-none"
                       required
                     />
                   </fieldset>
@@ -225,7 +225,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="relative">
-                  <fieldset className="group rounded-lg border border-zinc-600 px-2.5 py-1 transition-all focus-within:border-dashed focus-within:border-[#D97634]">
+                  <fieldset className="group rounded-xl border border-zinc-400 px-1.5 transition-all focus-within:border-dashed focus-within:border-[#D97634]">
                     <legend className="px-2 text-xs tracking-wider text-gray-400 uppercase">
                       Email Address
                     </legend>
@@ -235,7 +235,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       autoComplete="email"
-                      className="mb-1.5 w-full rounded-md  border-gray-400 border px-4 py-2 text-black placeholder-gray-500 focus:outline-none"
+                      className="mb-1.5 w-full rounded-lg  border-gray-400 border px-4 py-2 text-black placeholder-gray-500 focus:outline-none"
                       required
                     />
                   </fieldset>
@@ -251,7 +251,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="relative">
-                  <fieldset className="group rounded-lg border border-zinc-600 px-2.5 py-1 transition-all focus-within:border-dashed focus-within:border-[#D97634]">
+                  <fieldset className="group rounded-xl border border-zinc-400 px-1.5 transition-all focus-within:border-dashed focus-within:border-[#D97634]">
                     <legend className="px-2 text-xs tracking-wider text-gray-400 uppercase">
                       Phone Number
                     </legend>
@@ -262,7 +262,7 @@ export default function ContactPage() {
                       value={formData.phoneNo}
                       onChange={handleChange}
                       autoComplete="tel"
-                      className="mb-1.5 w-full rounded-md  border-gray-400 border px-4 py-2 text-black placeholder-gray-500 focus:outline-none"
+                      className="mb-1.5 w-full rounded-lg  border-gray-400 border px-4 py-2 text-black placeholder-gray-500 focus:outline-none"
                       required
                     />
                   </fieldset>
@@ -278,7 +278,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="relative">
-                  <fieldset className="group rounded-lg border border-zinc-600 px-2.5 py-1 transition-all focus-within:border-dashed focus-within:border-[#D97634]">
+                  <fieldset className="group rounded-xl border border-zinc-400 px-1.5 transition-all focus-within:border-dashed focus-within:border-[#D97634]">
                     <legend className="px-2 text-xs tracking-wider text-gray-400 uppercase">
                       Message
                     </legend>
@@ -288,7 +288,7 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleChange}
                       rows="5"
-                      className="w-full resize-none rounded-md  border-gray-400 border px-4 py-3 text-black placeholder-gray-500 focus:outline-none"
+                      className="w-full resize-none rounded-lg  border-gray-400 border px-4 py-3 text-black placeholder-gray-500 focus:outline-none"
                       required
                     />
                   </fieldset>
