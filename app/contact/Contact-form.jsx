@@ -235,7 +235,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       autoComplete="email"
-                      className="mb-1.5 w-full rounded-lg  border-gray-400 border px-4 py-2 text-black placeholder-gray-500 focus:outline-none"
+                      className="mb-1.5 w-full rounded-lg  border-gray-400 border px-4 py-1 text-black placeholder-gray-500 focus:outline-none"
                       required
                     />
                   </fieldset>
@@ -262,7 +262,7 @@ export default function ContactPage() {
                       value={formData.phoneNo}
                       onChange={handleChange}
                       autoComplete="tel"
-                      className="mb-1.5 w-full rounded-lg  border-gray-400 border px-4 py-2 text-black placeholder-gray-500 focus:outline-none"
+                      className="mb-1.5 w-full rounded-lg  border-gray-400 border px-4 py-1 text-black placeholder-gray-500 focus:outline-none"
                       required
                     />
                   </fieldset>
@@ -287,7 +287,7 @@ export default function ContactPage() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      rows="5"
+                      rows="4"
                       className="w-full resize-none rounded-lg  border-gray-400 border px-4 py-3 text-black placeholder-gray-500 focus:outline-none"
                       required
                     />
