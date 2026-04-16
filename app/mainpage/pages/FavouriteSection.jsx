@@ -7,7 +7,6 @@ const DISHES = [
     description:
       "Lorem amet, new check cons ectetur adipi scing alit mod ut labore.",
     price: "Rs. 170",
-    emoji: "🍜",
   },
   {
     id: 2,
@@ -70,19 +69,19 @@ export default function FavouritesSection() {
           Customer{" "}
           <span className="text-[#D84315] font-semibold ">Favourites</span>
         </h2>
-        <p className="text-sm text-[#777] mt-2 max-w-[420px] mx-auto leading-relaxed">
+        <p className="text-sm text-[#777] mt-2 max-w-105 mx-auto leading-relaxed">
           Featuring thoughtfully curated dishes that highlight the season's
           finest offerings.
         </p>
       </div>
 
       {/* Carousel */}
-      <div className="relative flex items-center justify-center gap-4 max-w-[1100px] mx-auto">
+      <div className="relative flex items-center justify-center gap-4 max-w-275 mx-auto">
         {/* Prev Button */}
         <button
           onClick={prev}
           disabled={startIndex === 0}
-          className="hidden lg:flex flex-shrink-0 w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-gray-600
+          className="hidden z-100 sm:flex shrink-0 w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md items-center justify-center text-gray-600
             hover:bg-[#D84315] hover:text-white hover:border-[#D84315] transition-all duration-200
             disabled:opacity-30 disabled:cursor-not-allowed"
         >
@@ -94,14 +93,11 @@ export default function FavouritesSection() {
           {visible.map((dish) => (
             <div key={dish.id} className=" flex flex-col items-center  px-5 ">
               {/* Circular image slot */}
-              <div className="w-[220px] h-[220px] z-100 rounded-full border-[3px] border-[#D84315] overflow-hidden bg-gray-100 flex items-center justify-center flex-shrink-0 ">
-                {/* Replace with your image:
-                <img src={`/images/${dish.id}.png`} alt={dish.name} className="w-full h-full object-cover" />
-                */}
-                <span className="text-4xl">{dish.emoji}</span>
+              <div className="w-55 h-55 z-100 rounded-full border-[3px] border-[#D84315] overflow-hidden bg-gray-100 flex items-center justify-center shrink-0 ">
+                <img src={`/customer-favourites/${dish.id}.png`} alt={dish.name} className="w-full h-full object-cover" />
               </div>
 
-              <div className="bg-white rounded-tr-[50px] rounded-bl-[50px] pb-4 px-6 flex flex-col items-center relative -top-12 pt-16 flex-shrink-0 shadow-lg hover:shadow-md transition-shadow duration-200">
+              <div className="bg-white rounded-tr-[50px] rounded-bl-[50px] pb-4 px-6 flex flex-col items-center relative -top-12 pt-16 shrink-0 shadow-lg hover:shadow-md transition-shadow duration-200">
                 {/* Dish Name */}
                 <h3
                   className="text-[15px] font-semibold text-[#1a1a1a] text-center mb-2"
@@ -128,7 +124,7 @@ export default function FavouritesSection() {
         <button
           onClick={next}
           disabled={startIndex >= DISHES.length - VISIBLE}
-          className="hidden lg:flex flex-shrink-0 w-10 h-10 rounded-full bg-[#D84315] text-white shadow-md flex items-center justify-center
+          className="hidden z-100 shrink-0 w-10 h-10 rounded-full bg-[#D84315] text-white shadow-md sm:flex items-center justify-center
             hover:bg-[#bf360c] transition-all duration-200
             disabled:opacity-30 disabled:cursor-not-allowed"
         >
