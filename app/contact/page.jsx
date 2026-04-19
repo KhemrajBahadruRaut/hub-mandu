@@ -1,6 +1,3 @@
-// ── FIND US & PLAN YOUR VISIT SECTION ──
-// Drop this above your existing ContactUs section
-
 import Image from "next/image";
 import ContactSection from "./Contact-form";
 
@@ -37,9 +34,8 @@ export default function page() {
       style={{ backgroundColor: BG_CREAM }}
       className="py-14 px-6 md:px-16"
       >
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-start gap-10 justify-center">
-        {/* ── LEFT: Text content ── */}
-        <div className="flex-1 max-w-xs">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-10 justify-center">
+        <div className="flex-1 max-w-lg">
           {/* Eyebrow */}
           <p
             className="text-xs font-sans font-semibold tracking-widest uppercase mb-2"
@@ -49,13 +45,13 @@ export default function page() {
           </p>
 
           {/* Heading */}
-          <h2 className="text-3xl font-bold text-stone-800 mb-4 leading-tight">
+          <h2 className="text-xl sm:text-4xl font-bold text-stone-800 mb-4 leading-tight">
             Find <span style={{ color: ORANGE }}>Us</span> &amp; Plan{" "}
             <span style={{ color: ORANGE }}>Your Visit</span>
           </h2>
 
           {/* Description */}
-          <p className="text-xs text-stone-500 leading-relaxed mb-6">
+          <p className="text-sm sm:text-lg text-stone-500 leading-relaxed mb-6">
             Enchanting ambiance, flavorful dishes, and attentive service. A true
             delight for plant lovers. Customer favorites include the chicken
             sandwich and tea.
@@ -122,19 +118,19 @@ export default function page() {
         </div>
 
         {/* ── RIGHT: Image collage ── */}
-        <div className="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[320px] h-[260px]">
-          <div className="relative flex-shrink-0 w-[300px] sm:w-[340px] md:w-[380px] h-[280px]">
+        <div className="relative shrink-0 w-70 sm:w-[320px] md:w-[320px] h-65">
+          <div className="relative shrink-0 w-75 sm:w-85 md:w-95 h-70">
             {/* Top-left: wine glasses */}
-            <div className="absolute top-0 left-0 w-[140px] sm:w-[160px] md:w-[175px] h-[200px] sm:h-[220px] md:h-[235px] rounded-tr-[30px] rounded-bl-[30px] overflow-hidden shadow-md z-10">
+            <div className="absolute top-0 left-0 w-35 sm:w-40 md:w-43.75 h-50 sm:h-55 md:h-58.75 rounded-tr-[30px] rounded-bl-[30px] overflow-hidden shadow-md z-10">
               <ImgWineGlasses />
             </div>
             {/* Bottom-right: barista */}
-            <div className="absolute -bottom-5 right-0 w-[155px] sm:w-[180px] md:w-[200px] h-[200px] sm:h-[220px] md:h-[235px] rounded-br-[30px] rounded-tl-[30px] overflow-hidden shadow-md z-10">
+            <div className="absolute -bottom-5 right-0 w-38.75 sm:w-45 md:w-50 h-50 sm:h-55 md:h-58.75 rounded-br-[30px] rounded-tl-[30px] overflow-hidden shadow-md z-10">
               <ImgBarista />
             </div>
             {/* Decorative orange squares */}
-            <div className="absolute top-1 right-[110px] sm:right-[125px] md:right-[142px] w-[40px] sm:w-[46px] md:w-[52px] h-[40px] sm:h-[46px] md:h-[52px] rounded-tl-2xl rounded-br-2xl z-0 bg-[#D84315]" />
-            <div className="absolute -bottom-4 left-[95px] sm:left-[105px] md:left-[118px] w-[40px] sm:w-[46px] md:w-[52px] h-[40px] sm:h-[46px] md:h-[52px] z-0 bg-[#D84315] rounded-tl-2xl rounded-br-2xl" />
+            <div className="absolute top-1 right-27.5 sm:right-31.25 md:right-35.5 w-10 sm:w-11.5 md:w-13 h-10 sm:h-11.5 md:h-13 rounded-tl-2xl rounded-br-2xl z-0 bg-[#D84315]" />
+            <div className="absolute -bottom-4 left-23.75 sm:left-26.25 md:left-29.5 w-10 sm:w-11.5 md:w-13 h-10 sm:h-11.5 md:h-13 z-0 bg-[#D84315] rounded-tl-2xl rounded-br-2xl" />
           </div>
         </div>
       </div>
