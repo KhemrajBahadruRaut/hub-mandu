@@ -20,7 +20,10 @@ const API_BASE = "http://localhost/manduhub_backend";
 // const API_BASE = "https://api.himalayanthakali.com/himalayanthakali_backend";
 
 function stripHtml(value = "") {
-  return value.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+  return value
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function getImageUrl(path = "") {
@@ -183,7 +186,8 @@ export default function AdminBlogs() {
   const applyBlogToForm = useCallback((blogData = {}) => {
     const nextForm = {
       title: blogData.title || "",
-      short_description: blogData.short_description || blogData.description || "",
+      short_description:
+        blogData.short_description || blogData.description || "",
       content: blogData.content || "",
     };
 
@@ -212,7 +216,10 @@ export default function AdminBlogs() {
 
   const handleCreate = async () => {
     if (!canSubmit) {
-      showToast("Title, short description and content are required.", "warning");
+      showToast(
+        "Title, short description and content are required.",
+        "warning",
+      );
       return;
     }
 
@@ -250,7 +257,10 @@ export default function AdminBlogs() {
     if (!editingId) return;
 
     if (!canSubmit) {
-      showToast("Title, short description and content are required.", "warning");
+      showToast(
+        "Title, short description and content are required.",
+        "warning",
+      );
       return;
     }
 
@@ -327,14 +337,19 @@ export default function AdminBlogs() {
 
     setIsEditDataLoading(true);
     try {
-      const res = await fetch(`${API_BASE}/blogs/get_single_blog.php?id=${blog.id}`);
+      const res = await fetch(
+        `${API_BASE}/blogs/get_single_blog.php?id=${blog.id}`,
+      );
       const data = await res.json();
 
       if (data?.success && data?.data) {
         setExistingImagePath(data.data.image || blog.image || "");
         applyBlogToForm(data.data);
       } else {
-        showToast(data?.message || "Could not load full blog content.", "warning");
+        showToast(
+          data?.message || "Could not load full blog content.",
+          "warning",
+        );
       }
     } catch (error) {
       console.error("Failed to fetch full blog content:", error);
@@ -349,7 +364,9 @@ export default function AdminBlogs() {
       <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-slate-900">Blog Management</h1>
+            <h1 className="text-2xl font-bold text-slate-900">
+              Blog Management
+            </h1>
             <p className="mt-1 text-sm text-slate-500">
               Create, update, and remove published blog posts.
             </p>
@@ -361,15 +378,25 @@ export default function AdminBlogs() {
 
         <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
-            <p className="text-xs font-semibold uppercase text-slate-500">Total Blogs</p>
-            <p className="mt-2 text-2xl font-bold text-slate-900">{blogs.length}</p>
+            <p className="text-xs font-semibold uppercase text-slate-500">
+              Total Blogs
+            </p>
+            <p className="mt-2 text-2xl font-bold text-slate-900">
+              {blogs.length}
+            </p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
-            <p className="text-xs font-semibold uppercase text-slate-500">Published This Week</p>
-            <p className="mt-2 text-2xl font-bold text-slate-900">{recentBlogsCount}</p>
+            <p className="text-xs font-semibold uppercase text-slate-500">
+              Published This Week
+            </p>
+            <p className="mt-2 text-2xl font-bold text-slate-900">
+              {recentBlogsCount}
+            </p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
-            <p className="text-xs font-semibold uppercase text-slate-500">Attached Image</p>
+            <p className="text-xs font-semibold uppercase text-slate-500">
+              Attached Image
+            </p>
             <p className="mt-2 truncate text-sm font-semibold text-slate-700">
               {imageFile?.name ||
                 (editingId && existingImagePath
@@ -406,7 +433,9 @@ export default function AdminBlogs() {
 
         <div className="grid gap-4">
           <div className="space-y-1">
-            <label className="text-xs font-semibold uppercase text-slate-500">Title</label>
+            <label className="text-xs font-semibold uppercase text-slate-500">
+              Title
+            </label>
             <input
               type="text"
               name="title"
@@ -433,8 +462,12 @@ export default function AdminBlogs() {
 
           <div className="space-y-1">
             <div className="flex items-center justify-between">
-              <label className="text-xs font-semibold uppercase text-slate-500">Content</label>
-              <span className="text-xs text-slate-400">{contentText.length} chars</span>
+              <label className="text-xs font-semibold uppercase text-slate-500">
+                Content
+              </label>
+              <span className="text-xs text-slate-400">
+                {contentText.length} chars
+              </span>
             </div>
             <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white">
               {editorLoading && (
@@ -447,7 +480,9 @@ export default function AdminBlogs() {
           </div>
 
           <div className="space-y-1">
-            <label className="text-xs font-semibold uppercase text-slate-500">Cover Image</label>
+            <label className="text-xs font-semibold uppercase text-slate-500">
+              Cover Image
+            </label>
             <div className="flex flex-col gap-2 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-3">
               <input
                 type="file"
@@ -511,7 +546,9 @@ export default function AdminBlogs() {
         <div className="mb-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <div>
             <h2 className="text-lg font-bold text-slate-900">Uploaded Blogs</h2>
-            <p className="text-sm text-slate-500">Search and manage all published entries.</p>
+            <p className="text-sm text-slate-500">
+              Search and manage all published entries.
+            </p>
           </div>
           <div className="relative w-full md:w-80">
             <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
@@ -538,7 +575,10 @@ export default function AdminBlogs() {
               </thead>
               <tbody>
                 {Array.from({ length: 5 }).map((_, index) => (
-                  <tr key={`blog-row-skeleton-${index}`} className="border-t border-slate-200">
+                  <tr
+                    key={`blog-row-skeleton-${index}`}
+                    className="border-t border-slate-200"
+                  >
                     <td className="px-4 py-3">
                       <div className="flex items-center gap-3">
                         <Skeleton className="h-16 w-20 bg-slate-200" />
@@ -568,7 +608,9 @@ export default function AdminBlogs() {
         ) : filteredBlogs.length === 0 ? (
           <div className="rounded-xl border border-dashed border-slate-300 py-12 text-center">
             <p className="text-sm font-medium text-slate-600">
-              {blogs.length === 0 ? "No blogs uploaded yet." : "No matching blogs found."}
+              {blogs.length === 0
+                ? "No blogs uploaded yet."
+                : "No matching blogs found."}
             </p>
           </div>
         ) : (
@@ -584,7 +626,10 @@ export default function AdminBlogs() {
               </thead>
               <tbody>
                 {filteredBlogs.map((blog) => (
-                  <tr key={blog.id} className="border-t border-slate-200  hover:bg-slate-50/70">
+                  <tr
+                    key={blog.id}
+                    className="border-t border-slate-200  hover:bg-slate-50/70"
+                  >
                     <td className="px-4 py-3">
                       <div className="flex min-w-60 items-center gap-3">
                         {blog.image ? (
@@ -605,7 +650,9 @@ export default function AdminBlogs() {
                           <p className="truncate text-sm font-semibold text-slate-800 text-wrap">
                             {blog.title}
                           </p>
-                          <p className="text-xs text-slate-500">ID #{blog.id}</p>
+                          <p className="text-xs text-slate-500">
+                            ID #{blog.id}
+                          </p>
                         </div>
                       </div>
                     </td>
