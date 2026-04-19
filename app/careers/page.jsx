@@ -372,7 +372,7 @@ export default function CareerPage() {
                 placeholder="Full Name"
                 required
                 onChange={handleFormChange}
-                className="w-full border p-3 rounded"
+                className="w-full border border-gray-400 p-2 rounded"
               />
 
               <input
@@ -381,7 +381,7 @@ export default function CareerPage() {
                 placeholder="Email"
                 required
                 onChange={handleFormChange}
-                className="w-full border p-3 rounded"
+                className="w-full border border-gray-400 p-2 rounded"
               />
 
               <input
@@ -389,7 +389,7 @@ export default function CareerPage() {
                 name="phone"
                 placeholder="Phone"
                 onChange={handleFormChange}
-                className="w-full border p-3 rounded"
+                className="w-full border border-gray-400 p-2 rounded"
               />
 
               <textarea
@@ -397,7 +397,7 @@ export default function CareerPage() {
                 placeholder="Cover Letter / Message"
                 rows="3"
                 onChange={handleFormChange}
-                className="w-full border p-3 rounded"
+                className="w-full border border-gray-400 p-2 rounded"
               />
 
               <input
@@ -406,7 +406,7 @@ export default function CareerPage() {
                 accept=".pdf,.doc,.docx"
                 required
                 onChange={handleFormChange}
-                className="w-full"
+                className=" border px-2 border-gray-400 py-2"
               />
 
               <div className="md:ml-6">
