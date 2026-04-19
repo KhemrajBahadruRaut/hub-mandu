@@ -5,6 +5,7 @@ import WhyChooseUs from "./pages/WhyChooseUs.jsx";
 import Testimonials from "./pages/Testimonials.jsx";
 import AboutUs from "./pages/AboutSection.jsx";
 import Image from "next/image.js";
+import Link from "next/link.js";
 
 export default function MandhuHub() {
   return (
@@ -36,9 +37,11 @@ export default function MandhuHub() {
               Explore Now
             </button>
 
+            <Link href="/menu">
             <button className="bg-transparent text-[#333] border border-[#ccc] px-6 py-2.5 rounded-tl-[14px] rounded-br-[14px] text-[15px] cursor-pointer flex items-center gap-2 transition-all duration-200 hover:border-[#D84315] hover:text-[#D84315]">
               View Menu <span>→</span>
             </button>
+            </Link>
           </div>
         </div>
 
@@ -53,6 +56,7 @@ export default function MandhuHub() {
             <div className="absolute top-40 sm:top-50 md:top-60 lg:top-75 right-1/2 lg:-right-5 xl:right-10 translate-x-1/2 lg:translate-x-0 -translate-y-1/2 w-55 h-55 sm:w-75 sm:h-75 md:w-90 md:h-90 lg:w-130 lg:h-130 rounded-full flex items-center justify-center overflow-hidden">
               <Image
                 src="/main-png/main.png"
+                loading="eager"
                 alt="Burger and Fries"
                 width={500}
                 height={500}
