@@ -10,8 +10,8 @@ import {
   Filter
 } from "lucide-react";
 
-const API = "http://localhost/manduhub_backend/application";
-  // const API = "https://api.himalayanthakali.com/himalayanthakali_backend";
+// const API = "http://localhost/manduhub_backend/application";
+  const API = "https://mandu.gr8.com.np/application";
 
 
 export default function CareerApplications() {
@@ -111,7 +111,8 @@ export default function CareerApplications() {
                     <td className="p-4">
                       <div className="flex justify-center gap-2">
                         <a
-                          href={`http://localhost/manduhub_backend/application/uploads/${app.resume}`}
+                          // href={`http://localhost/manduhub_backend/application/uploads/${app.resume}`}
+                          href={`https://mandu.gr8.com.np/application/uploads/${app.resume}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="p-2 text-zinc-500 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition"
@@ -120,7 +121,8 @@ export default function CareerApplications() {
                           <ExternalLink size={20} />
                         </a>
                         <a
-                          href={`http://localhost/manduhub_backend/application/uploads/${app.resume}`}
+                          href={`https://mandu.gr8.com.np/application/uploads/${app.resume}`}
+                          // href={`http://localhost/manduhub_backend/application/uploads/${app.resume}`}
                           download
                           className="p-2 text-zinc-500 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition"
                           title="Download Resume"

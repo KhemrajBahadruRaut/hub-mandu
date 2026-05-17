@@ -478,7 +478,7 @@ export default function MenuAdmin() {
                                 src={
                                   item.image_url.startsWith("http")
                                     ? item.image_url
-                                    : `https://api.himalayanthakali.com/${item.image_url.replace(
+                                    : `https://mandu.gr8.com.np/${item.image_url.replace(
                                         /^\/+/,
                                         ""
                                       )}`
