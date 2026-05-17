@@ -21,7 +21,8 @@ const CareerApplications = dynamic(() => import("./application/page"), {
   ),
 });
 
-const API = "http://localhost/manduhub_backend/career";
+// const API = "http://localhost/manduhub_backend/career";
+const API = "https://mandu.gr8.com.np/career";
   // const API = "https://api.himalayanthakali.com/himalayanthakali_backend";
 
 

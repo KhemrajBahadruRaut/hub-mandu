@@ -4,10 +4,10 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useToast } from "../components/providers/ToastProvider";
 
-const API = "http://localhost/manduhub_backend/career";
-// const API = "https://api.himalayanthakali.com/himalayanthakali_backend/career";
-const API2 = "http://localhost/manduhub_backend/application";
-// const API2 = "https://api.himalayanthakali.com/himalayanthakali_backend/application";
+// const API = "http://localhost/manduhub_backend/career";
+const API = "https://mandu.gr8.com.np/career";
+// const API2 = "http://localhost/manduhub_backend/application";
+const API2 = "https://mandu.gr8.com.np/application";
 
 export default function CareerPage() {
   const [jobListings, setJobListings] = useState([]);

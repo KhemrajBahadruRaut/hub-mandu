@@ -13,7 +13,8 @@ import {
 import { useToast } from "../../../components/providers/ToastProvider";
 import Skeleton from "../../../components/ui/Skeleton";
 
-const API = "http://localhost/manduhub_backend/menu";
+// const API = "http://localhost/manduhub_backend/menu";
+const API = "https://mandu.gr8.com.np/menu";
 
 function toCurrency(value) {
   const amount = Number(value);

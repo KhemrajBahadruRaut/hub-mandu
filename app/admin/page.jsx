@@ -18,7 +18,8 @@ export default function AdminLogin() {
 
   try {
     const res = await axios.post(
-      "http://localhost/manduhub_backend/admin/admin_login.php",
+      // "http://localhost/manduhub_backend/admin/admin_login.php",
+      "https://mandu.gr8.com.np/admin/admin_login.php",
       { email, password },
       { headers: { "Content-Type": "application/json" } }
     );

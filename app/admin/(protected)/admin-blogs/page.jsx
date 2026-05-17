@@ -16,8 +16,8 @@ import { useToast } from "../../../components/providers/ToastProvider";
 
 import Skeleton from "../../../components/ui/Skeleton";
 
-const API_BASE = "http://localhost/manduhub_backend";
-// const API_BASE = "https://api.himalayanthakali.com/himalayanthakali_backend";
+// const API_BASE = "http://localhost/manduhub_backend";
+const API_BASE = "https://mandu.gr8.com.np";
 
 function stripHtml(value = "") {
   return value

@@ -10,9 +10,9 @@ import Link from "next/link.js";
 export default function MandhuHub() {
   return (
     <div className="font-sans m-0 p-0 box-border overflow-x-hidden container mx-auto">
-      {/* HERO */}
+      {/* HERO section*/}
       <section className="flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 md:px-8 lg:pl-12 bg-white relative overflow-hidden">
-        {/* LEFT */}
+        {/* LEFT section*/}
         <div className="flex-1 max-w-170 z-10 text-center lg:text-left py-10 lg:py-0">
           <h1 className="text-[46px] sm:text-[46px] md:text-[56px] lg:text-[80px] leading-[1.15] text-[#1a1a1a]">
             Craving Something
@@ -45,12 +45,10 @@ export default function MandhuHub() {
           </div>
         </div>
 
-        {/* RIGHT */}
+        {/* RIGHT section */}
         <div className="lg:flex flex-1 hidden relative min-h-95 sm:min-h-120 md:min-h-140 lg:min-h-162.5 w-full items-stretch justify-end">
           {/* Orange background blob */}
           <div className="absolute right-0 top-0 w-45 sm:w-60 md:w-70 lg:w-87.5 h-full bg-[#D84315] rounded-tr-[70px] sm:rounded-tr-[100px] lg:rounded-tr-[140px] rounded-bl-[70px] sm:rounded-bl-[100px] lg:rounded-bl-[140px] z-0" />
-
-          {/* Image Slots */}
           <div className="relative z-10 w-full h-full">
             {/* Main circular image slot */}
             <div className="absolute top-40 sm:top-50 md:top-60 lg:top-75 right-1/2 lg:-right-5 xl:right-10 translate-x-1/2 lg:translate-x-0 -translate-y-1/2 w-55 h-55 sm:w-75 sm:h-75 md:w-90 md:h-90 lg:w-130 lg:h-130 rounded-full flex items-center justify-center overflow-hidden">

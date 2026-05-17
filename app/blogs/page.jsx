@@ -10,7 +10,8 @@ import { ArrowBigDown } from "lucide-react";
 import { ArrowBigRight } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 const API_BASE =
-  process.env.NEXT_PUBLIC_API_BASE || "http://localhost/manduhub_backend";
+  // process.env.NEXT_PUBLIC_API_BASE || "http://localhost/manduhub_backend";
+  process.env.NEXT_PUBLIC_API_BASE || "https://mandu.gr8.com.np";
 // const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://api.hubmandu.com/himalayanthakali_backend";
 
 function BlogCardSkeleton() {

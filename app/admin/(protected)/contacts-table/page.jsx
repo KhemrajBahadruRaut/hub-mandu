@@ -15,11 +15,11 @@ import Skeleton from "../../../components/ui/Skeleton";
 
 
 const CONTACTS_API =
-  // "https://api.himalayanthakali.com/himalayanthakali_backend/contacts/get-contacts.php";
-  "http://localhost/manduhub_backend/contacts/get-contacts.php";
+  "https://mandu.gr8.com.np/contacts/get-contacts.php";
+  // "http://localhost/manduhub_backend/contacts/get-contacts.php";
 const DELETE_CONTACT_API =
-  // "https://api.himalayanthakali.com/himalayanthakali_backend/contacts/delete-contact.php";
-  "http://localhost/manduhub_backend/contacts/delete-contact.php";
+  "https://mandu.gr8.com.np/contacts/delete-contact.php";
+  // "http://localhost/manduhub_backend/contacts/delete-contact.php";
 
 function formatDateTime(value) {
   const date = new Date(value);

@@ -4,8 +4,8 @@ export const dynamic = "force-dynamic";
 export const runtime = "nodejs"; // ensures stable server fetch
 
 const API_BASE =
-  // "https://api.himalayanthakali.com/himalayanthakali_backend";
-  "http://localhost/manduhub_backend";
+  "https://mandu.gr8.com.np";
+  // "http://localhost/manduhub_backend";
 
 async function getBlog(id) {
   if (!id) return null;
@@ -39,8 +39,8 @@ export async function generateMetadata({ searchParams }) {
     if (!blog) return {};
 
     const imageUrl = `${API_BASE}/${blog.image}`;
-    // const pageUrl = `https://himalayanthakali.com/blogs/blogdetails?id=${id}`;
-    const pageUrl = `http://localhost/manduhub/blogs/blogdetails?id=${id}`;
+    const pageUrl = `https://mandu.gr8.com.np/blogs/blogdetails?id=${id}`;
+    // const pageUrl = `http://localhost/manduhub/blogs/blogdetails?id=${id}`;
 
     return {
       title: blog.title,
