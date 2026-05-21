@@ -22,14 +22,15 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="relative flex z-100 items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 py-4 bg-white shadow-sm">
+    <nav className="relative flex z-100 items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 bg-white shadow-sm py-1">
       {/* Logo */}
       <Link
         href="/"
         className="text-lg sm:text-xl text-gray-900 tracking-wide z-20"
         style={{ fontFamily: "Georgia, serif" }}
       >
-        Mandu <span className="font-bold">HUB</span>
+        {/* Mandu <span className="font-bold">HUB</span> */}
+        <img src="/logo/logo.jpeg" className="w-20" alt="logo" />
       </Link>
 
       {/* Desktop Nav Links */}
