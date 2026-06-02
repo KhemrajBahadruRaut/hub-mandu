@@ -1,5 +1,9 @@
-const NAV_LINKS = ["Home", "Menu", "Careers", "Contact", "Blogs"];
-
+const NAV_LINKS = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Blogs", path: "/blogs" },
+  { name: "Contact", path: "/contact" },
+];
 export default function Footer() {
   return (
     <footer className="w-full bg-[#1e1e1e] text-white px-8 md:px-16 pt-10 pb-6">
@@ -41,7 +45,7 @@ export default function Footer() {
         <div className="flex items-center gap-5">
           {/* Facebook */}
           <a
-            href="#"
+            href="https://www.facebook.com/ManduHub"
             aria-label="Facebook"
             className="text-white hover:text-[#D84315] transition-colors duration-200"
           >
@@ -56,7 +60,7 @@ export default function Footer() {
           </a>
           {/* Instagram */}
           <a
-            href="#"
+            href="https://www.instagram.com/manduhub/"
             aria-label="Instagram"
             className="text-white hover:text-[#D84315] transition-colors duration-200"
           >
@@ -79,8 +83,10 @@ export default function Footer() {
               />
             </svg>
           </a>
+
+          {/* tiktok */}
           <a
-            href="#"
+            href="https://www.tiktok.com/@mandu.hubs.newbaneshwor"
             aria-label="Instagram"
             className="text-white hover:text-[#D84315] transition-colors duration-200"
           >
@@ -105,12 +111,12 @@ export default function Footer() {
       {/* Nav Links */}
       <ul className="flex flex-wrap gap-6 mb-6 list-none p-0 m-0">
         {NAV_LINKS.map((link) => (
-          <li key={link}>
+          <li key={link.name}>
             <a
-              href="#"
+              href={link.path}
               className="text-[13px] text-gray-300 hover:text-[#D84315] transition-colors duration-200 no-underline"
             >
-              {link}
+              {link.name}
             </a>
           </li>
         ))}
@@ -120,7 +126,8 @@ export default function Footer() {
       <div className="flex flex-wrap gap-6 mb-8 items-center">
         {/* Location */}
         <a
-          href="#"
+          target="_blank"
+          href="https://www.google.com/maps/place/Mandu+Hubs/@27.6878857,85.3333724,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb19a238d42a93:0x34d17ff74eaf44bd!8m2!3d27.687881!4d85.3359473!16s%2Fg%2F11njtg0j38?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D"
           className="flex items-center gap-2 text-[13px] text-gray-300 hover:text-[#D84315] transition-colors duration-200 underline underline-offset-2"
         >
           <svg
@@ -138,7 +145,7 @@ export default function Footer() {
             />
             <circle cx="12" cy="10" r="2.5" fill="currentColor" stroke="none" />
           </svg>
-          Location, Address Name
+          Madan Bhandari Road, Kathmandu 44600
         </a>
 
         {/* Email */}
@@ -179,7 +186,7 @@ export default function Footer() {
               d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
             />
           </svg>
-          9808444499 | 01-1000000
+          9808444499
         </div>
       </div>
 

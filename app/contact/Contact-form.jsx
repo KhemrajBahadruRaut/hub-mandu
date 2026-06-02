@@ -135,7 +135,7 @@ export default function ContactPage() {
           {/* Social icons */}
           <div className="flex items-center gap-4">
             {/* Facebook */}
-            <a href="#" aria-label="Facebook" className="hover:opacity-70 transition-opacity">
+            <a href="https://www.facebook.com/ManduHub" aria-label="Facebook" className="hover:opacity-70 transition-opacity">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-6 h-6"
@@ -146,7 +146,7 @@ export default function ContactPage() {
               </svg>
             </a>
             {/* Instagram */}
-            <a href="#" aria-label="Instagram" className="hover:opacity-70 transition-opacity">
+            <a href="https://www.instagram.com/manduhub/" aria-label="Instagram" className="hover:opacity-70 transition-opacity">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-6 h-6"

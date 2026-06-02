@@ -29,11 +29,11 @@ const ImgBarista = () => (
   </div>
 );
 
-// ✅ FIXED founder images (clean + responsive)
+//  FIXED founder images (clean + responsive)
 const ImgFounder1 = () => (
   <div className="relative w-full h-full">
     <Image
-      src="/aboutpage/founders/f1.jpg"
+      src="/team/f.webp"
       alt="Founder 1"
       fill
       className="object-cover object-center"
@@ -43,10 +43,21 @@ const ImgFounder1 = () => (
   </div>
 );
 
-const ImgFounder2 = () => (
+const ImgCoFounder = () => (
   <div className="relative w-full h-full">
     <Image
-      src="/aboutpage/founders/f2.jpg"
+      src="/team/cf1.webp"
+      alt="Founder 2"
+      fill
+      className="object-cover object-center"
+      sizes="(max-width: 768px) 100vw, 200px"
+    />
+  </div>
+);
+const ImgCoFounder2 = () => (
+  <div className="relative w-full h-full">
+    <Image
+      src="/team/cf2.webp"
       alt="Founder 2"
       fill
       className="object-cover object-center"
@@ -135,34 +146,55 @@ export default function page() {
         </div>
       </section>
 
-      {/*  SECTION 2: TEAM */}
-      <section className="md:py-16 px-6 md:px-16 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-center text-sm text-[#D84315] font-sans font-semibold tracking-widest uppercase mb-2">
-            Behind Hub Mandu
-          </p>
+{/*  SECTION 2: TEAM */}
+<section className="md:py-20 py-12 px-6 md:px-16 bg-white overflow-hidden">
+  <div className="max-w-6xl mx-auto">
 
-          <h2 className=" text-2xl sm:text-4xl font-bold text-stone-800 text-center sm:mb-12 mb-4">
-            Meet <span className="text-[#D84315]">Our Team</span>
-          </h2>
+    <p className="text-center text-sm text-[#D84315] font-sans font-semibold tracking-[0.2em] uppercase mb-3">
+      Behind Hub Mandu
+    </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-            <TeamCard
-              img={<ImgFounder1 />}
-              quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              name="Mr. Lorem ipsum"
-              role="Founder"
-            />
+    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-800 text-center mb-14">
+      Meet <span className="text-[#D84315]">Our Team</span>
+    </h2>
 
-            <TeamCard
-              img={<ImgFounder2 />}
-              quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              name="Mr. Lorem ipsum"
-              role="Founder"
-            />
-          </div>
-        </div>
-      </section>
+    {/* Founder */}
+    <div className="flex justify-center mb-14">
+      <div className="w-full max-w-sm">
+        <TeamCard
+          img={<ImgFounder1 />}
+          quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          name="Mr. Deependra Tamang"
+          role="Founder"
+        />
+      </div>
+    </div>
+
+    {/* Co Founders */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto">
+
+      <div className="w-full">
+        <TeamCard
+          img={<ImgCoFounder />}
+          quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          name="Mr. James Ghising"
+          role="Co-Founder"
+        />
+      </div>
+
+      <div className="w-full">
+        <TeamCard
+          img={<ImgCoFounder2 />}
+          quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          name="Mr. Prazwal Limbu"
+          role="Co-Founder"
+        />
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* SECTION 3 */}
       <section className="py-16 px-6 md:px-16 bg-white">
