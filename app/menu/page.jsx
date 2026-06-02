@@ -4,7 +4,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Skeleton from "../components/ui/Skeleton";
 
-const API = "http://localhost/manduhub_backend/menu";
+// const API = "http://localhost/manduhub_backend/menu";
+const API = "https://mandu.gr8.com.np/manduhub_backend/menu";
 
 function MenuCategorySkeleton() {
   return (

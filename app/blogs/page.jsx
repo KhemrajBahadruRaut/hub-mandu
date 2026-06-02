@@ -8,8 +8,8 @@ import { Calendar } from "lucide-react";
 import Skeleton from "../components/ui/Skeleton";
 import { ArrowRight } from "lucide-react";
 const API_BASE =
-  process.env.NEXT_PUBLIC_API_BASE || "http://localhost/manduhub_backend";
-  // process.env.NEXT_PUBLIC_API_BASE || "https://mandu.gr8.com.np";
+  // process.env.NEXT_PUBLIC_API_BASE || "http://localhost/manduhub_backend";
+  process.env.NEXT_PUBLIC_API_BASE || "https://mandu.gr8.com.np";
 
 function BlogCardSkeleton() {
   return (
