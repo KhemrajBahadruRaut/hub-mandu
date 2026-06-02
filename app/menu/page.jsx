@@ -5,7 +5,7 @@ import Image from "next/image";
 import Skeleton from "../components/ui/Skeleton";
 
 // const API = "http://localhost/manduhub_backend/menu";
-const API = "https://mandu.gr8.com.np/manduhub_backend/menu";
+const API = "https://mandu.gr8.com.np/menu";
 
 function MenuCategorySkeleton() {
   return (
