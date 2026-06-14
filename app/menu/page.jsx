@@ -166,7 +166,7 @@ const MenuPage = () => {
               </div>
             ) : (
               <section
-                className="mx-auto border grid gap-3 max-w-6xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-stretch"
+                className="mx-auto border grid gap-3 max-w-6xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
                 aria-label="Menu items"
               >
                 {items.map((item) => (
@@ -175,9 +175,9 @@ const MenuPage = () => {
                     type="button"
                     onClick={() => setSelectedItem(item)}
                     aria-label={`View details for ${item.name}`}
-                    className="cursor-pointer border rounded-lg text-left transform transition-transform duration-300 ease-out hover:scale-105 flex flex-col h-full"
+                    className="cursor-pointer border rounded-lg text-left transform transition-transform duration-300 ease-out hover:scale-105"
                   >
-                    <div className="relative z-1 mx-auto aspect-square max-w-55 overflow-hidden rounded-full border-4 border-[#D8431580]/2 bg-[#D8431580] shrink-0">
+                    <div className="relative z-1 mx-auto aspect-square max-w-55 overflow-hidden rounded-full border-4 border-[#D8431580]/2 bg-[#D8431580]">
                       <Image
                         src={item.image || "/placeholder.png"}
                         alt={item.name}
@@ -186,15 +186,15 @@ const MenuPage = () => {
                         className="h-full w-full object-cover"
                       />
                     </div>
-                    <div className="flex flex-1 justify-center">
-                      <div className="border shadow-[0_0_20px_rgba(0,0,0,0.2)] relative w-60 p-6 -top-15 pt-20 rounded-tr-[50px] rounded-bl-[50px] flex flex-col flex-1">
+                    <div className="flex justify-center">
+                      <div className="border shadow-[0_0_20px_rgba(0,0,0,0.2)] relative w-60 p-6 -top-15 pt-20 rounded-tr-[50px] rounded-bl-[50px]">
                         <h2 className="mb-2 text-center text-lg text-gray-700 font-semibold">
                           {item.name}
                         </h2>
-                        <p className="mb-4 text-center text-xs leading-relaxed text-gray-700 flex-1">
+                        <p className="mb-4 text-center text-xs leading-relaxed text-gray-700">
                           {item.description}
                         </p>
-                        <p className="text-center font-medium text-[#D97634] mt-auto">
+                        <p className="text-center font-medium text-[#D97634]">
                           Rs. {item.price}/-
                         </p>
                       </div>

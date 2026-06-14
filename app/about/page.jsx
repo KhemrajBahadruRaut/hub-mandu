@@ -67,7 +67,7 @@ const ImgCoFounder2 = () => (
 );
 
 // Gallery placeholders
-const ImgGallery1 = () =>  (
+const ImgGallery1 = () => (
   <div className="w-full h-full">
     <Image
       src="/aboutpage/2.jpg"
@@ -78,7 +78,7 @@ const ImgGallery1 = () =>  (
     />
   </div>
 );
-const ImgGallery2 = () =>  (
+const ImgGallery2 = () => (
   <div className="w-full h-full">
     <Image
       src="/aboutpage/2.jpg"
@@ -146,55 +146,48 @@ export default function page() {
         </div>
       </section>
 
-{/*  SECTION 2: TEAM */}
-<section className="md:py-20 py-12 px-6 md:px-16 bg-white overflow-hidden">
-  <div className="max-w-6xl mx-auto">
+      {/*  SECTION 2: TEAM */}
+      <section className="md:py-20 py-12 px-6 md:px-16 bg-white overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-center text-sm text-[#D84315] font-sans font-semibold tracking-[0.2em] uppercase mb-3">
+            Behind Hub Mandu
+          </p>
 
-    <p className="text-center text-sm text-[#D84315] font-sans font-semibold tracking-[0.2em] uppercase mb-3">
-      Behind Hub Mandu
-    </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-800 text-center mb-14">
+            Meet <span className="text-[#D84315]">Our Team</span>
+          </h2>
 
-    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-800 text-center mb-14">
-      Meet <span className="text-[#D84315]">Our Team</span>
-    </h2>
+          {/* Founder */}
+          <div className="flex justify-center mb-14">
+            <div className="w-full max-w-sm">
+              <TeamCard
+                img={<ImgFounder1 />}
+                name="Mr. Deependra Tamang"
+                role="Founder"
+              />
+            </div>
+          </div>
 
-    {/* Founder */}
-    <div className="flex justify-center mb-14">
-      <div className="w-full max-w-sm">
-        <TeamCard
-          img={<ImgFounder1 />}
-          quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          name="Mr. Deependra Tamang"
-          role="Founder"
-        />
-      </div>
-    </div>
+          {/* Co Founders */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto">
+            <div className="w-full">
+              <TeamCard
+                img={<ImgCoFounder />}
+                name="Mr. James Ghising"
+                role="Co-Founder"
+              />
+            </div>
 
-    {/* Co Founders */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto">
-
-      <div className="w-full">
-        <TeamCard
-          img={<ImgCoFounder />}
-          quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          name="Mr. James Ghising"
-          role="Co-Founder"
-        />
-      </div>
-
-      <div className="w-full">
-        <TeamCard
-          img={<ImgCoFounder2 />}
-          quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          name="Mr. Prazwal Limbu"
-          role="Co-Founder"
-        />
-      </div>
-
-    </div>
-
-  </div>
-</section>
+            <div className="w-full">
+              <TeamCard
+                img={<ImgCoFounder2 />}
+                name="Mr. Prazwal Limbu"
+                role="Co-Founder"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* SECTION 3 */}
       <section className="py-16 px-6 md:px-16 bg-white">
@@ -265,15 +258,15 @@ function TeamCard({ img, quote, name, role }) {
 
       {/* Content */}
       <div className="flex-1 text-center sm:text-left md:mt-8 pl-3">
-        <span className="text-4xl text-stone-300 font-serif">"</span>
+        {/* <span className="text-4xl text-stone-300 font-serif">"</span> */}
 
         <p className="text-sm text-stone-700 leading-relaxed -mt-3 mb-4">
           {quote}
         </p>
 
-        <span className="hidden sm:block text-4xl text-stone-300 font-serif float-right">
+        {/* <span className="hidden sm:block text-4xl text-stone-300 font-serif float-right">
           "
-        </span>
+        </span> */}
 
         <div className="clear-both">
           <p className="text-sm font-semibold text-stone-800">{name}</p>
