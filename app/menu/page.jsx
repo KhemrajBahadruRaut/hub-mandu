@@ -114,9 +114,9 @@ const MenuPage = () => {
 
   return (
     <>
-      <div className=" text-white">
+      <div className="text-white">
         <div className="flex flex-col lg:flex-row">
-          <aside className="w-full border-b border-gray-800 p-4 pt-20 lg:w-64  lg:border-b-0">
+          <aside className="w-full border-b border-gray-800 p-4 pt-20 lg:w-64 lg:border-b-0">
             <h2 className="mb-4 text-center lg:mb-6 text-[#D97634] text-lg tracking-widest font-bold">
               MENU
             </h2>
@@ -135,10 +135,10 @@ const MenuPage = () => {
                         type="button"
                         onClick={() => fetchItems(category.id)}
                         aria-pressed={activeCategory === category.id}
-                        className={`w-full whitespace-nowrap rounded  px-4 py-2 text-start text-sm transition-colors lg:text-base ${
+                        className={`w-full whitespace-nowrap rounded px-4 py-2 text-start text-sm transition-colors lg:text-base ${
                           activeCategory === category.id
                             ? "bg-[#D97634] font-medium text-white"
-                            : "text-black hover:bg-orange-200 "
+                            : "text-black hover:bg-orange-200"
                         }`}
                       >
                         {category.name}
@@ -165,85 +165,49 @@ const MenuPage = () => {
                 </div>
               </div>
             ) : (
-              <>
-                <section
-                  className="mx-auto border grid gap-3 max-w-6xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-                  aria-label="Menu items"
-                >
-                  {items.slice(0, 3).map((item) => (
-                    <button
-                      key={item.id}
-                      type="button"
-                      onClick={() => setSelectedItem(item)}
-                      aria-label={`View details for ${item.name}`}
-                      className="cursor-pointer border rounded-lg text-left transform transition-transform duration-300 ease-out hover:scale-105"
-                    >
-                      <div className="relative z-1 mx-auto aspect-square max-w-55 overflow-hidden rounded-full border-4 border-[#D8431580]/2 bg-[#D8431580]">
-                        <Image
-                          src={item.image || "/placeholder.png"}
-                          alt={item.name}
-                          fill
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          className="h-full w-full object-cover"
-                        />
-                      </div>
-                      <div className=" flex justify-center">
-                        <div className="border shadow-[0_0_20px_rgba(0,0,0,0.2)]  relative w-60 p-6 -top-15 pt-20 rounded-tr-[50px] rounded-bl-[50px]">
-                          <h2 className="mb-2 text-center text-lg text-gray-700 font-semibold">
-                            {item.name}
-                          </h2>
-                          <p className="mb-4 text-center text-xs leading-relaxed text-gray-700">
-                            {item.description}
-                          </p>
-                          <p className="text-center font-medium text-[#D97634]">
-                            Rs. {item.price}/-
-                          </p>
-                        </div>
-                      </div>
-                    </button>
-                  ))}
-                </section>
-
-                {items.length > 3 && (
-                  <section
-                    className="mx-auto max-w-sm px-2 sm:px-0 border "
-                    aria-label="Featured menu item"
+              <section
+                className="mx-auto border grid gap-3 max-w-6xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+                aria-label="Menu items"
+              >
+                {items.map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => setSelectedItem(item)}
+                    aria-label={`View details for ${item.name}`}
+                    className="cursor-pointer border rounded-lg text-left transform transition-transform duration-300 ease-out hover:scale-105"
                   >
-                    <button
-                      type="button"
-                      onClick={() => setSelectedItem(items[3])}
-                      aria-label={`View details for ${items[3].name}`}
-                      className="w-full cursor-pointer rounded-lg bg-gray-800/50 p-6 text-left transition-colors hover:bg-gray-800"
-                    >
-                      <div className="relative mx-auto mb-4 aspect-square max-w-55 overflow-hidden rounded-full bg-gray-700">
-                        <Image
-                          src={items[3].image || "/placeholder.png"}
-                          alt={items[3].name}
-                          fill
-                          sizes="(max-width: 768px) 100vw, 400px"
-                          className="h-full w-full object-cover"
-                        />
+                    <div className="relative z-1 mx-auto aspect-square max-w-55 overflow-hidden rounded-full border-4 border-[#D8431580]/2 bg-[#D8431580]">
+                      <Image
+                        src={item.image || "/placeholder.png"}
+                        alt={item.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="flex justify-center">
+                      <div className="border shadow-[0_0_20px_rgba(0,0,0,0.2)] relative w-60 p-6 -top-15 pt-20 rounded-tr-[50px] rounded-bl-[50px]">
+                        <h2 className="mb-2 text-center text-lg text-gray-700 font-semibold">
+                          {item.name}
+                        </h2>
+                        <p className="mb-4 text-center text-xs leading-relaxed text-gray-700">
+                          {item.description}
+                        </p>
+                        <p className="text-center font-medium text-[#D97634]">
+                          Rs. {item.price}/-
+                        </p>
                       </div>
-
-                      <h2 className="mb-2 text-center text-lg font-semibold">
-                        {items[3].name}
-                      </h2>
-                      <p className="mb-4 text-center text-xs leading-relaxed text-gray-400">
-                        {items[3].description}
-                      </p>
-                      <p className="text-center font-medium text-[#D97634]">
-                        Rs. {items[3].price}/-
-                      </p>
-                    </button>
-                  </section>
-                )}
-              </>
+                    </div>
+                  </button>
+                ))}
+              </section>
             )}
           </main>
 
           {selectedItem && (
             <div
-              className="fixed inset-0 z-100 flex items-center justify-center bg-black/30  px-4"
+              className="fixed inset-0 z-100 flex items-center justify-center bg-black/30 px-4"
               onClick={() => setSelectedItem(null)}
               role="dialog"
               aria-modal="true"
