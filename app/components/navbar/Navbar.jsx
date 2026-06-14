@@ -30,7 +30,7 @@ export default function Navbar() {
         style={{ fontFamily: "Georgia, serif" }}
       >
         {/* Mandu <span className="font-bold">HUB</span> */}
-        <img src="/logo/logo.jpeg" className="w-20" alt="logo" />
+        <img src="/logo/logo.png" className="w-20" alt="logo" />
       </Link>
 
       {/* Desktop Nav Links */}
