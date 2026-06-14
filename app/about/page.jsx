@@ -147,47 +147,48 @@ export default function page() {
       </section>
 
       {/*  SECTION 2: TEAM */}
-      <section className="md:py-20 py-12 px-6 md:px-16 bg-white overflow-hidden">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-center text-sm text-[#D84315] font-sans font-semibold tracking-[0.2em] uppercase mb-3">
-            Behind Hub Mandu
-          </p>
+     {/* TEAM SECTION */}
+<section className="py-16 md:py-24 px-6 md:px-16 bg-white overflow-hidden">
+  <div className="max-w-6xl mx-auto">
+    <p className="text-center text-sm text-[#D84315] font-semibold tracking-[0.25em] uppercase mb-3">
+      Behind Hub Mandu
+    </p>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-800 text-center mb-14">
-            Meet <span className="text-[#D84315]">Our Team</span>
-          </h2>
+    <h2 className="text-center text-3xl md:text-5xl font-bold text-stone-800 mb-4">
+      Meet Our <span className="text-[#D84315]">Team</span>
+    </h2>
 
-          {/* Founder */}
-          <div className="flex justify-center mb-14">
-            <div className="w-full max-w-sm">
-              <TeamCard
-                img={<ImgFounder1 />}
-                name="Mr. Deependra Tamang"
-                role="Founder"
-              />
-            </div>
-          </div>
+    <p className="max-w-2xl mx-auto text-center text-stone-600 text-sm md:text-base mb-14">
+      The people who bring Hub Mandu to life every day, combining passion,
+      hospitality, and dedication to create memorable experiences.
+    </p>
 
-          {/* Co Founders */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto">
-            <div className="w-full">
-              <TeamCard
-                img={<ImgCoFounder />}
-                name="Mr. James Ghising"
-                role="Co-Founder"
-              />
-            </div>
+    {/* Founder */}
+    <div className="flex justify-center mb-16">
+      <TeamCard
+        img={<ImgFounder1 />}
+        name="Mr. Deependra Tamang"
+        role="Founder"
+        featured
+      />
+    </div>
 
-            <div className="w-full">
-              <TeamCard
-                img={<ImgCoFounder2 />}
-                name="Mr. Prazwal Limbu"
-                role="Co-Founder"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+    {/* Co Founders */}
+    <div className="grid md:grid-cols-2 gap-10 max-w-3xl mx-auto">
+      <TeamCard
+        img={<ImgCoFounder />}
+        name="Mr. James Ghising"
+        role="Co-Founder"
+      />
+
+      <TeamCard
+        img={<ImgCoFounder2 />}
+        name="Mr. Prazwal Limbu"
+        role="Co-Founder"
+      />
+    </div>
+  </div>
+</section>
 
       {/* SECTION 3 */}
       <section className="py-16 px-6 md:px-16 bg-white">
@@ -247,31 +248,36 @@ export default function page() {
 }
 
 // RESPONSIVE TEAM CARD
-function TeamCard({ img, quote, name, role }) {
+function TeamCard({ img, name, role, featured = false }) {
   return (
-    <div className="flex relative flex-col sm:flex-row items-center sm:items-start md:gap-5">
-      {/* Image */}
-      <div className="w-48 h-60 sm:w-42 sm:h-50 md:w-46 md:h-60 z-10 relative rounded-tr-4xl rounded-bl-4xl overflow-hidden shadow-md">
-        {img}
-      </div>
-      <div className="md:flex hidden absolute w-40 h-40 -top-4 -left-3 rounded-tr-4xl rounded-bl-4xl bg-[#D8431599]"></div>
+    <div className="group flex flex-col items-center text-center">
+      {/* Image Container */}
+      <div className="relative">
+        {/* Decorative Background */}
+        <div
+          className={`absolute -top-5 -left-5 rounded-tr-4xl rounded-bl-4xl bg-[#D84315]/20
+          ${featured ? "w-50 h-62" : "w-42 h-54"}`}
+        />
 
-      {/* Content */}
-      <div className="flex-1 text-center sm:text-left md:mt-8 pl-3">
-        {/* <span className="text-4xl text-stone-300 font-serif">"</span> */}
-
-        <p className="text-sm text-stone-700 leading-relaxed -mt-3 mb-4">
-          {quote}
-        </p>
-
-        {/* <span className="hidden sm:block text-4xl text-stone-300 font-serif float-right">
-          "
-        </span> */}
-
-        <div className="clear-both">
-          <p className="text-sm font-semibold text-stone-800">{name}</p>
-          <p className="text-sm font-semibold text-[#D84315]">{role}</p>
+        {/* Image */}
+        <div
+          className={`relative z-10 overflow-hidden shadow-lg rounded-tr-4xl rounded-bl-4xl
+          transition-transform duration-300 group-hover:scale-[1.02]
+          ${featured ? "w-60 h-72" : "w-52 h-64"}`}
+        >
+          {img}
         </div>
+      </div>
+
+      {/* Details */}
+      <div className="mt-6">
+        <h3 className="text-xl font-bold text-stone-800">{name}</h3>
+
+        <div className="w-12 h-0.5 bg-[#D84315] mx-auto my-3"></div>
+
+        <p className="text-[#D84315] font-semibold tracking-wide uppercase text-sm">
+          {role}
+        </p>
       </div>
     </div>
   );
