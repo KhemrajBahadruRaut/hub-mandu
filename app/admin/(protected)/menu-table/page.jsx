@@ -53,10 +53,10 @@ function EditItemModal({ item, onClose, onSave }) {
     return () => window.removeEventListener("keydown", handler);
   }, [onClose]);
 
-  const existingImageUrl = item.image_url
-    ? item.image_url.startsWith("http")
-      ? item.image_url
-      : `https://mandu.gr8.com.np/${item.image_url.replace(/^\/+/, "")}`
+  const existingImageUrl = item.image
+    ? item.image.startsWith("http")
+      ? item.image
+      : `https://mandu.gr8.com.np/${item.image.replace(/^\/+/, "")}`
     : null;
 
   const displayPreview = previewUrl || existingImageUrl;
@@ -416,6 +416,7 @@ export default function MenuAdmin() {
     (c) => String(c.id) === String(activeCategory)
   )?.name;
 
+  // ── Render ─────────────────────────────────────────────────────────────────
   return (
     <>
       {editingItem && (
@@ -665,10 +666,10 @@ export default function MenuAdmin() {
 
                     {!isItemsLoading &&
                       filteredItems.map((item) => {
-                        const imgSrc = item.image_url
-                          ? item.image_url.startsWith("http")
-                            ? item.image_url
-                            : `https://mandu.gr8.com.np/${item.image_url.replace(/^\/+/, "")}`
+                        const imgSrc = item.image
+                          ? item.image.startsWith("http")
+                            ? item.image
+                            : `https://mandu.gr8.com.np/${item.image.replace(/^\/+/, "")}`
                           : null;
 
                         return (
