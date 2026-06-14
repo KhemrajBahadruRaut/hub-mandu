@@ -7,22 +7,22 @@ export default function AboutUs() {
 
         {/* Top Left — Fried Rice */}
         <div className="rounded-tr-[50px] rounded-bl-[50px] overflow-hidden h-50 flex items-center justify-center">
-          <img src="/aboutus/i4.jpg" alt="Fried Rice" className="w-full h-full object-cover" /> 
+          <img src="/aboutus/i4.jpeg" alt="Fried Rice" className="w-full h-full object-cover" /> 
         </div>
 
         {/* Top Right — Momo with accent border */}
         <div className="relative rounded-tl-[50px] bg-[#D8431599] pt-4 pr-4 md:top-10 rounded-br-[50px] overflow-hidden h-50 flex items-center justify-center">
-           <img src="/aboutus/o2.jpg" alt="Momo" className="w-full rounded-tl-[50px]  rounded-br-[50px] h-full relative z-10" /> 
+           <img src="/aboutus/i2.jpeg" alt="Momo" className="w-full rounded-tl-[50px]  rounded-br-[50px] h-full relative z-10" /> 
         </div>
 
         {/* Bottom Left — Burger with accent border */}
         <div className="relative rounded-tl-[50px] bg-[#D8431599] pb-4 pl-4 rounded-br-[50px] overflow-hidden  h-50 flex items-center justify-center">
-           <img src="/aboutus/i3.jpg" alt="Burger" className="w-full rounded-tl-[50px]  rounded-br-[50px] h-full object-cover relative z-10" /> 
+           <img src="/aboutus/i3.jpeg" alt="Burger" className="w-full rounded-tl-[50px]  rounded-br-[50px] h-full object-cover relative z-10" /> 
         </div>
 
         {/* Bottom Right — Thukpa/Noodle Soup */}
         <div className="rounded-tr-[50px] md:top-10 relative rounded-bl-[50px] overflow-hidden h-50 flex items-center justify-center">
-          <img src="/aboutus/i1.png" alt="Thukpa" className="w-full h-full object-cover" />
+          <img src="/aboutus/i1.jpeg" alt="Thukpa" className="w-full h-full object-cover" />
         </div>
 
       </div>
