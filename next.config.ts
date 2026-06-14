@@ -1,26 +1,24 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
     remotePatterns: [
-      //  LOCAL DEVELOPMENT
-      {
-        protocol: "http",
-        hostname: "localhost",
-        port: "",
-        pathname: "/manduhub_backend/**",
-      },
-
-      // ( if serve images directly from main domain)
+      // LOCAL DEVELOPMENT
       // {
-      //   protocol: "https",
-      //   hostname: "himalayanthakali.com",
-      //   pathname: "/himalayanthakali_backend/**",
+      //   protocol: "http",
+      //   hostname: "localhost",
+      //   port: "",
+      //   pathname: "/manduhub_backend/**",
       // },
+      // LIVE SERVER
+      {
+        protocol: "https",
+        hostname: "mandu.gr8.com.np",
+        port: "",
+        pathname: "/menu/uploads/**",
+      },
     ],
-
-    dangerouslyAllowLocalIP: true, // needed for localhost images
+    dangerouslyAllowLocalIP: true,
   },
 };
 
