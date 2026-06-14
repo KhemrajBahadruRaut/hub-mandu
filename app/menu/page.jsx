@@ -180,11 +180,7 @@ const MenuPage = () => {
                     >
                       <div className="relative z-1 mx-auto aspect-square max-w-55 overflow-hidden rounded-full border-4 border-[#D8431580]/2 bg-[#D8431580]">
                         <Image
-                          src={
-                            item.image
-                              ? `${API}/uploads/${item.image}`
-                              : "/placeholder.png"
-                          }
+                          src={item.image || "/placeholder.png"}
                           alt={item.name}
                           fill
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -221,11 +217,7 @@ const MenuPage = () => {
                     >
                       <div className="relative mx-auto mb-4 aspect-square max-w-55 overflow-hidden rounded-full bg-gray-700">
                         <Image
-                          src={
-                            items[3].image
-                              ? `${API}/uploads/${items[3].image}`
-                              : "/placeholder.png"
-                          }
+                          src={items[3].image || "/placeholder.png"}
                           alt={items[3].name}
                           fill
                           sizes="(max-width: 768px) 100vw, 400px"
@@ -272,11 +264,7 @@ const MenuPage = () => {
 
                 <div className="relative mb-4 aspect-square overflow-hidden rounded-lg bg-[#D97634]">
                   <Image
-                    src={
-                      selectedItem.image
-                        ? `${API}/uploads/${selectedItem.image}`
-                        : "/placeholder.png"
-                    }
+                    src={selectedItem.image || "/placeholder.png"}
                     alt={selectedItem.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 512px"
