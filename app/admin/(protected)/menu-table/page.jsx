@@ -56,7 +56,7 @@ function EditItemModal({ item, onClose, onSave }) {
   const existingImageUrl = item.image
     ? item.image.startsWith("http")
       ? item.image
-      : `https://mandu.gr8.com.np/${item.image.replace(/^\/+/, "")}`
+      : `https://mandu.gr8.com.np/menu/uploads/${item.image.replace(/^\/+/, "")}`
     : null;
 
   const displayPreview = previewUrl || existingImageUrl;
@@ -669,7 +669,7 @@ export default function MenuAdmin() {
                         const imgSrc = item.image
                           ? item.image.startsWith("http")
                             ? item.image
-                            : `https://mandu.gr8.com.np/${item.image.replace(/^\/+/, "")}`
+                            : `https://mandu.gr8.com.np/menu/uploads/${item.image.replace(/^\/+/, "")}`
                           : null;
 
                         return (
