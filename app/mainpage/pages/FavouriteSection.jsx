@@ -5,14 +5,14 @@ const DISHES = [
     id: 1,
     name: "Veg Fried Rice",
     description:
-      "Lorem amet, new check cons ectetur adipi scing alit mod ut labore.",
+      "Hot fried rice with fresh vegetables and spices. Quick, easy, and always good.",
     price: "Rs. 170",
   },
   {
     id: 2,
     name: "Chicken Rice Bowl",
     description:
-      "Lorem amet, new check cons ectetur adipi scing alit mod ut labore.",
+      "Juicy chicken over warm rice with a rich sauce. A filling meal that hits the spot.",
     price: "Rs. 220",
     emoji: "🍚",
   },
@@ -20,7 +20,7 @@ const DISHES = [
     id: 3,
     name: "Vegetable Stir-fry",
     description:
-      "Lorem amet, new check cons ectetur adipi scing alit mod ut labore.",
+      "Fresh veggies cooked with garlic and ginger. Simple, healthy, and tasty.",
     price: "Rs. 150",
     emoji: "🥦",
   },
@@ -28,25 +28,25 @@ const DISHES = [
     id: 4,
     name: "Chicken Momo",
     description:
-      "Lorem amet, new check cons ectetur adipi scing alit mod ut labore.",
+      "Soft chicken dumplings, freshly steamed and served with our homemade tomato chutney.",
     price: "Rs. 190",
     emoji: "🥟",
   },
   {
     id: 5,
-    name: "Beef Burger",
+    name: "Chicken Nugget",
     description:
-      "Lorem amet, new check cons ectetur adipi scing alit mod ut labore.",
+      "Crispy on the outside, juicy on the inside. A quick bite that never gets old.",
     price: "Rs. 280",
-    emoji: "🍔",
+    emoji: "🍗",
   },
   {
     id: 6,
-    name: "Crispy Fries",
+    name: "Buff Sekuwa",
     description:
-      "Lorem amet, new check cons ectetur adipi scing alit mod ut labore.",
+      "Tender buffalo meat grilled over open flame with Nepali spices. Bold, smoky, and full of flavour.",
     price: "Rs. 120",
-    emoji: "🍟",
+    emoji: "🔥",
   },
 ];
 

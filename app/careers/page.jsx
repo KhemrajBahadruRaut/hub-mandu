@@ -223,8 +223,10 @@ export default function CareerPage() {
             className="text-[#999] text-base leading-relaxed max-w-150 mx-auto animate-fadeInUp"
             style={{ animationDelay: "0.2s", animationFillMode: "backwards" }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
+            We are always looking for good people who love food and enjoy making
+            others happy. At Mandu Hubs, we work hard, look out for each other,
+            and take pride in what we do every day. If that sounds like you, we
+            would love to hear from you.
           </p>
         </header>
 

@@ -51,9 +51,10 @@ export default function page() {
 
             {/* Description */}
             <p className="text-sm sm:text-lg text-stone-500 leading-relaxed mb-6">
-              Enchanting ambiance, flavorful dishes, and attentive service. A
-              true delight for plant lovers. Customer favorites include the
-              chicken sandwich and tea.
+              Come visit us in New Baneshwor, Kathmandu — where fresh food,
+              warm service, and a friendly vibe are waiting for you. Whether
+              you are dining in or just want to find us, we are easy to reach
+              and always happy to help.
             </p>
 
             {/* Info rows */}
@@ -71,7 +72,7 @@ export default function page() {
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" />
                   </svg>
                 </span>
-                Location, Address Name
+                New Baneshwor, Kathmandu
               </div>
 
               {/* Email */}

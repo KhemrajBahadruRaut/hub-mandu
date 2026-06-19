@@ -129,7 +129,8 @@ export default function ContactPage() {
 
           {/* Subtext */}
           <p className="text-xs text-stone-500 leading-relaxed mb-6">
-            Fill up the form provided to get in touch with us.
+            Have a question, feedback, or a bulk order in mind? Drop us a
+            message and we will get back to you as soon as possible.
           </p>
 
           {/* Social icons */}

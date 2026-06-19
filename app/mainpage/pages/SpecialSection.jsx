@@ -30,10 +30,12 @@ const SpecialSection = () => {
 
         {/* Description */}
         <p className="text-sm text-[#555] leading-[1.75] mb-6 max-w-105 text-justify">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
+          Hungry between meals? Visit Mandu Hubs — one of the most affordable
+          restaurants in Kathmandu and enjoy 25% off your favourite dishes every
+          day from 11am to 2pm. Whether you&apos;re craving hot chicken momo, a
+          hearty rice bowl, or a warming bowl of thukpa, our Happy Hour deal
+          gives you authentic Nepali fast food at unbeatable prices. Dine in or
+          order via Pathao Foods and Foodmandu.
         </p>
 
         {/* Location */}
@@ -42,7 +44,7 @@ const SpecialSection = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 21c-4.418-4.418-7-8.182-7-11A7 7 0 0119 10c0 2.818-2.582 6.582-7 11z" />
             <circle cx="12" cy="10" r="2.5" fill="currentColor" stroke="none" />
           </svg>
-          Location name, Address
+          New Baneshwor, Kathmandu
         </div>
       </div>
 

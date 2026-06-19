@@ -48,16 +48,17 @@ export default function AboutUs() {
 
         {/* Paragraph 1 */}
         <p className="text-[14px] text-[#555] leading-[1.8] mb-5">
-          Our restaurant brings the true taste of Nepal to your plate. From
-          traditional Dal Bhat to authentic Newari and Thakali dishes, every
-          meal is prepared using local ingredients, traditional recipes, and
-          heartfelt Nepali hospitality.
+          Good food does not need to be complicated. At Mandu Hubs, we believe
+          every person deserves a meal that is fresh, filling, and made with
+          real care — not just something to get through the day.
         </p>
 
         {/* Paragraph 2 */}
         <p className="text-[14px] text-[#555] leading-[1.8] mb-8">
-          We serve fresh, tasty meals that hit the spot when you're hungry
-          and in a hurry. Satisfaction guaranteed, no compromises.
+          We are based in the heart of New Baneshwor, Kathmandu, and every
+          single day we show up to do one thing: to feed people good food at a
+          fair price. Local ingredients, honest cooking, no shortcuts. Hunger
+          does not wait. Neither do we.
         </p>
 
         {/* CTA Button */}

@@ -137,10 +137,16 @@ export default function page() {
               Welcome to <span className="text-[#D84315]">HUB Mandu</span>
             </h2>
             <p className="text-base font-semibold text-stone-700 mb-3">
-              A powerful opening paragraph that captures your essence
+              Kathmandu runs on good food — and we are here to make sure you never go hungry.
             </p>
             <p className="text-sm text-stone-600 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+              Mandu Hubs started as a simple idea in the busy streets of New
+              Baneshwor, Kathmandu — that everyday people deserve really good food
+              without spending a lot. We keep things simple. Fresh ingredients,
+              real recipes, affordable prices that do not compromise on quality.
+              We do not cut corners because we know you can taste the difference.
+              Behind every meal is a team that genuinely cares to make sure you
+              leave satisfied.
             </p>
           </div>
         </div>
@@ -159,8 +165,6 @@ export default function page() {
     </h2>
 
     <p className="max-w-2xl mx-auto text-center text-stone-600 text-sm md:text-base mb-14">
-      The people who bring Hub Mandu to life every day, combining passion,
-      hospitality, and dedication to create memorable experiences.
     </p>
 
     {/* Founder */}
@@ -202,15 +206,17 @@ export default function page() {
               <span className="text-[#D84315]">Kathmandu</span>
             </h2>
             <p className="text-sm text-stone-600 mb-5 text-justify">
-              Step inside and feel the warm glow of reclaimed wood, the buzz of
-              conversation, and the open view of our bustling kitchen. Our
-              dining room is designed for connection—whether it’s an intimate
-              date at our cozy corner booths or a lively celebration at our
-              communal chef’s table. <br />
+              Step inside Mandu Hubs and you will feel it straight away — warm,
+              lively, and completely unpretentious. It is the kind of place where
+              the smell of fresh food hits you at the door and the noise of a
+              busy, happy kitchen reminds you that everything is made fresh.
               <br />
-              We are proud to be a part of the vibrant [Neighborhood] community.
-              Beyond our doors, we support [Local Charity/School/Initiative] and
-              believe in giving back to the place that has given us so much."
+              <br />
+              We are proud to be part of New Baneshwor, a neighbourhood that
+              moves fast, works hard, and deserves good food at every corner. If
+              you are looking for an affordable restaurant in Kathmandu, you have
+              found it. Mandu Hubs is not just a place to eat. It is a place to
+              take a breath, recharge, and get back out there.
             </p>
           </div>
 
