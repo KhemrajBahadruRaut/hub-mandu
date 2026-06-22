@@ -5,8 +5,8 @@ import {  X } from "lucide-react";
 
 
 const CONTACT_API =
-  `${process.env.NEXT_PUBLIC_API_BASE || "http://localhost/manduhub_backend"}/contacts/submit-contact.php`;
-  // `${process.env.NEXT_PUBLIC_API_BASE || "https://api.himalayanthakali.com/himalayanthakali_backend"}/contacts/submit-contact.php`;
+  // `${process.env.NEXT_PUBLIC_API_BASE || "http://localhost/manduhub_backend"}/contacts/submit-contact.php`;
+  `${process.env.NEXT_PUBLIC_API_BASE || "https://mandu.gr8.com.np"}/contacts/submit-contact.php`;
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
