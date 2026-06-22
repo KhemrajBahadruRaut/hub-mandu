@@ -54,14 +54,14 @@ export default function AdminLayout({ children }) {
         fixed lg:static inset-y-0 left-0 z-30 w-64 bg-slate-900 text-white transform transition-transform duration-200 ease-in-out
         ${isSidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
       `}>
-           <div className="flex items-center justify-between h-16 px-6 border-b border-slate-800">
+           <div className="flex items-baseline justify-between h-16 px-6 border-b border-slate-800">
           <span className="text-xl flex font-bold tracking-wider  ">
             <Image
-              src="/logo/himalayan-thakalil-logo.png"
+              src="/logo/nobglogo.png"
               alt="mandu hub"
               width={80}
               height={80}
-              className="w-40 h-10"
+              className="w-18 h-15"
             />
           </span>
             <span className="text-[#E9842C] flex font-bold tracking-wider items-baseline">ADMIN</span>

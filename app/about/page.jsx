@@ -30,30 +30,6 @@ const ImgBarista = () => (
 );
 
 //  FIXED founder images (clean + responsive)
-const ImgFounder1 = () => (
-  <div className="relative w-full h-full">
-    <Image
-      src="/team/f.webp"
-      alt="Founder 1"
-      fill
-      className="object-cover object-center"
-      sizes="(max-width: 768px) 100vw, 200px"
-      priority
-    />
-  </div>
-);
-
-const ImgCoFounder = () => (
-  <div className="relative w-full h-full">
-    <Image
-      src="/team/cf1.webp"
-      alt="Founder 2"
-      fill
-      className="object-cover object-center"
-      sizes="(max-width: 768px) 100vw, 200px"
-    />
-  </div>
-);
 const ImgCoFounder2 = () => (
   <div className="relative w-full h-full">
     <Image
@@ -137,65 +113,49 @@ export default function page() {
               Welcome to <span className="text-[#D84315]">HUB Mandu</span>
             </h2>
             <p className="text-base font-semibold text-stone-700 mb-3">
-              Kathmandu runs on good food — and we are here to make sure you never go hungry.
+              Kathmandu runs on good food — and we are here to make sure you
+              never go hungry.
             </p>
             <p className="text-sm text-stone-600 leading-relaxed">
               Mandu Hubs started as a simple idea in the busy streets of New
-              Baneshwor, Kathmandu — that everyday people deserve really good food
-              without spending a lot. We keep things simple. Fresh ingredients,
-              real recipes, affordable prices that do not compromise on quality.
-              We do not cut corners because we know you can taste the difference.
-              Behind every meal is a team that genuinely cares to make sure you
-              leave satisfied.
+              Baneshwor, Kathmandu — that everyday people deserve really good
+              food without spending a lot. We keep things simple. Fresh
+              ingredients, real recipes, affordable prices that do not
+              compromise on quality. We do not cut corners because we know you
+              can taste the difference. Behind every meal is a team that
+              genuinely cares to make sure you leave satisfied.
             </p>
           </div>
         </div>
       </section>
 
       {/*  SECTION 2: TEAM */}
-     {/* TEAM SECTION */}
-<section className="py-16 md:py-24 px-6 md:px-16 bg-white overflow-hidden">
-  <div className="max-w-6xl mx-auto">
-    <p className="text-center text-sm text-[#D84315] font-semibold tracking-[0.25em] uppercase mb-3">
-      Behind Hub Mandu
-    </p>
+      {/* TEAM SECTION */}
+      <section className="py-16 px-6 md:px-16 bg-white overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-center text-sm text-[#D84315] font-semibold tracking-[0.25em] uppercase mb-3">
+            Behind Hub Mandu
+          </p>
 
-    <h2 className="text-center text-3xl md:text-5xl font-bold text-stone-800 mb-4">
-      Meet Our <span className="text-[#D84315]">Team</span>
-    </h2>
+          <h2 className="text-center text-3xl md:text-5xl font-bold text-stone-800 mb-4">
+            Meet Our <span className="text-[#D84315]">Founder</span>
+          </h2>
 
-    <p className="max-w-2xl mx-auto text-center text-stone-600 text-sm md:text-base mb-14">
-    </p>
+          <p className="max-w-2xl mx-auto text-center text-stone-600 text-sm md:text-base mb-14"></p>
 
-    {/* Founder */}
-    <div className="flex justify-center mb-16">
-      <TeamCard
-        img={<ImgFounder1 />}
-        name="Mr. Deependra Tamang"
-        role="Founder"
-        featured
-      />
-    </div>
-
-    {/* Co Founders */}
-    <div className="grid md:grid-cols-2 gap-10 max-w-3xl mx-auto">
-      <TeamCard
-        img={<ImgCoFounder />}
-        name="Mr. James Ghising"
-        role="Co-Founder"
-      />
-
-      <TeamCard
-        img={<ImgCoFounder2 />}
-        name="Mr. Prazwal Limbu"
-        role="Co-Founder"
-      />
-    </div>
-  </div>
-</section>
+          {/* Founder */}
+          <div className="flex justify-center mb-16">
+            <TeamCard
+              img={<ImgCoFounder2 />}
+              name="Mr. Prazwal Limbu"
+              role="Founder / Managing Director"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* SECTION 3 */}
-      <section className="py-16 px-6 md:px-16 bg-white">
+      <section className="pb-10 px-6 md:px-16 bg-white">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-12">
           <div className="flex-1">
             <p className="text-sm text-[#D84315] font-semibold uppercase mb-2">
@@ -207,16 +167,17 @@ export default function page() {
             </h2>
             <p className="text-sm text-stone-600 mb-5 text-justify">
               Step inside Mandu Hubs and you will feel it straight away — warm,
-              lively, and completely unpretentious. It is the kind of place where
-              the smell of fresh food hits you at the door and the noise of a
-              busy, happy kitchen reminds you that everything is made fresh.
+              lively, and completely unpretentious. It is the kind of place
+              where the smell of fresh food hits you at the door and the noise
+              of a busy, happy kitchen reminds you that everything is made
+              fresh.
               <br />
               <br />
               We are proud to be part of New Baneshwor, a neighbourhood that
               moves fast, works hard, and deserves good food at every corner. If
-              you are looking for an affordable restaurant in Kathmandu, you have
-              found it. Mandu Hubs is not just a place to eat. It is a place to
-              take a breath, recharge, and get back out there.
+              you are looking for an affordable restaurant in Kathmandu, you
+              have found it. Mandu Hubs is not just a place to eat. It is a
+              place to take a breath, recharge, and get back out there.
             </p>
           </div>
 
