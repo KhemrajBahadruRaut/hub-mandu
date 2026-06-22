@@ -1,7 +1,8 @@
 "use client"
 import React, { useState, useEffect, useRef } from 'react'
 
-const API_BASE = 'http://localhost/manduhub_backend/specialsection'
+// const API_BASE = 'http://localhost/manduhub_backend/specialsection'
+const API_BASE = 'https://mandu.gr8.com.np/specialsection'
 
 export default function SpecialSectionAdmin() {
   const [current, setCurrent] = useState('')
