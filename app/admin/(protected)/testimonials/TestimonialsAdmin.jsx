@@ -70,14 +70,19 @@ export default function TestimonialsAdmin() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id })
     })
-    const data = await res.json()
+
+    const text = await res.text()           
+    console.log('Delete response:', text)   
+    const data = JSON.parse(text)          
+
     if (data.status === 'success') {
       load()
     } else {
       alert(`Error: ${data.message}`)
     }
-  } catch {
-    alert('Delete failed — check your server.')
+  } catch (e) {
+    console.error('Delete error:', e)
+    alert('Delete failed — check console.')
   }
 }
 
