@@ -194,7 +194,7 @@ export default function Footer() {
       <hr className="border-[#333] mb-5" />
 
       {/* Bottom Row */}
-      <div className="flex flex-wrap items-center justify-between gap-3 text-[12px] text-gray-500">
+      <div className="flex flex-wrap items-center justify-between gap-3 text-[12px] text-gray-400">
         <p>
           © {new Date().getFullYear()} Hub Mandu. All rights reserved.{" "}
           <span className="mx-1">|</span>
@@ -212,11 +212,19 @@ export default function Footer() {
             Privacy Policy
           </a>
         </p>
-
-        <p className="flex items-center gap-1 text-gray-500">
-          Developed by{" "}
-          <span className="ml-1 text-[#D84315] font-semibold">◈</span>
-        </p>
+        <a href="https://gr8.com.np">
+          <p className="flex items-center gap-1 text-gray-200">
+            Developed by{" "}
+            <span className="ml-1 text-[#D84315] font-semibold">
+              <img
+                src="/logo/GR8-Nepal-Private-Limited-Logo.webp"
+                alt=""
+                height={20}
+                width={20}
+              />
+            </span>
+          </p>
+        </a>
       </div>
     </footer>
   );
