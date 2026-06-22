@@ -87,9 +87,13 @@ export default function Testimonials() {
       )}
 
       <div className="flex justify-center mt-10">
-        <a href="#" className="text-[#D84315] text-sm font-medium underline underline-offset-4 flex items-center gap-2 hover:text-[#bf360c] transition-colors duration-200">
-          Leave a Review →
-        </a>
+        <a
+  href="https://www.google.com/maps/place/Mandu+Hubs/@27.687881,85.3333724,17z/data=!4m14!1m7!3m6!1s0x39eb19a238d42a93:0x34d17ff74eaf44bd!2sMandu+Hubs!8m2!3d27.687881!4d85.3359473!16s%2Fg%2F11njtg0j38!3m5!1s0x39eb19a238d42a93:0x34d17ff74eaf44bd!8m2!3d27.687881!4d85.3359473!16s%2Fg%2F11njtg0j38"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Review Us on Google
+</a>
       </div>
     </section>
   )
