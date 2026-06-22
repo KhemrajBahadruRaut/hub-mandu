@@ -82,7 +82,7 @@ export default function AdminLayout({ children }) {
           <SidebarItem icon={<UserStar size={20} />} text="Testimonials" href="/admin/testimonials" active={pathname === "/admin/testimonials"} />
           <SidebarItem icon={<Contact2Icon size={20} />} text="Contact" href="/admin/contacts-table" active={pathname === "/admin/contacts-table"} />
           <SidebarItem icon={<LucideWorkflow size={20} />} text="career" href="/admin/admin-career" active={pathname === "/admin/admin-career"} />
-          <SidebarItem icon={<PackagePlus size={20} />} text="Blogs" href="/admin/admin-blogsd" active={pathname === "/admin/admin-blogs"} />
+          <SidebarItem icon={<PackagePlus size={20} />} text="Blogs" href="/admin/admin-blogs" active={pathname === "/admin/admin-blogs"} />
         </nav>
 
         <div className="p-4 border-t border-slate-800">
