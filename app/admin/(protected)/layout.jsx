@@ -10,6 +10,8 @@ import { LayoutDashboard } from "lucide-react";
 import { Contact2Icon } from "lucide-react";
 import { LucideWorkflow } from "lucide-react";
 import { PackagePlus } from "lucide-react";
+import { UserStar } from "lucide-react";
+import { Gem } from "lucide-react";
 
 export default function AdminLayout({ children }) {
   const router = useRouter();
@@ -74,11 +76,13 @@ export default function AdminLayout({ children }) {
         <nav className="flex-1 px-3 py-6 space-y-1">
           {/* Note: We pass the 'active' prop based on the current pathname */}
          
-          <SidebarItem icon={<LayoutDashboard size={20} />} text="dashboard" href="/admin/dashboard" active={pathname === "/admin/dashboard"} />
-          <SidebarItem icon={<MenuIcon size={20} />} text="menu" href="/admin/menu-table" active={pathname === "/admin/menu-table"} />
-          <SidebarItem icon={<Contact2Icon size={20} />} text="contact" href="/admin/contacts-table" active={pathname === "/admin/contacts-table"} />
+          <SidebarItem icon={<LayoutDashboard size={20} />} text="Dashboard" href="/admin/dashboard" active={pathname === "/admin/dashboard"} />
+          <SidebarItem icon={<MenuIcon size={20} />} text="Menu" href="/admin/menu-table" active={pathname === "/admin/menu-table"} />
+          <SidebarItem icon={<Gem size={20} />} text="Special Section" href="/admin/admin-special" active={pathname === "/admin/admin-special"} />
+          <SidebarItem icon={<UserStar size={20} />} text="Testimonials" href="/admin/testimonials" active={pathname === "/admin/testimonials"} />
+          <SidebarItem icon={<Contact2Icon size={20} />} text="Contact" href="/admin/contacts-table" active={pathname === "/admin/contacts-table"} />
           <SidebarItem icon={<LucideWorkflow size={20} />} text="career" href="/admin/admin-career" active={pathname === "/admin/admin-career"} />
-          <SidebarItem icon={<PackagePlus size={20} />} text="blogs" href="/admin/admin-blogs" active={pathname === "/admin/admin-blogs"} />
+          <SidebarItem icon={<PackagePlus size={20} />} text="Blogs" href="/admin/admin-blogsd" active={pathname === "/admin/admin-blogs"} />
         </nav>
 
         <div className="p-4 border-t border-slate-800">
