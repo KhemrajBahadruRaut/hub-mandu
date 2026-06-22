@@ -26,10 +26,6 @@ async function getBlog(id) {
   }
 }
 
-/* ============================= */
-/* ✅ FACEBOOK / WHATSAPP PREVIEW */
-/* ============================= */
-
 export async function generateMetadata({ searchParams }) {
   try {
     const id = searchParams?.id;
@@ -70,10 +66,6 @@ export async function generateMetadata({ searchParams }) {
     return {};
   }
 }
-
-/* ============================= */
-/* ✅ BLOG PAGE */
-/* ============================= */
 
 export default async function BlogDetails({ searchParams, params }) {
 

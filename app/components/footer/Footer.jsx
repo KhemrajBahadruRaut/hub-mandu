@@ -217,7 +217,7 @@ export default function Footer() {
             Developed by{" "}
             <span className="ml-1 text-[#D84315] font-semibold">
               <img
-                src="/logo/GR8-Nepal-Private-Limited-Logo.webp"
+                src="/logo/GR8-Nepal-Private-Limited-Logo.png"
                 alt=""
                 height={20}
                 width={20}
