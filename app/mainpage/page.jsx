@@ -60,9 +60,12 @@ export default function MandhuHub() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-9 items-center lg:items-start justify-center lg:justify-start">
+            <Link href="/about">
+
             <button className="bg-[#D84315] text-white border-none px-7 py-2.5 rounded-tl-[14px] rounded-br-[14px] text-[15px] font-semibold cursor-pointer transition-all duration-200 hover:bg-[#bf360c] hover:-translate-y-0.5">
               Explore Now
             </button>
+            </Link>
 
             <Link href="/menu">
               <button className="bg-transparent text-[#333] border border-[#ccc] px-6 py-2.5 rounded-tl-[14px] rounded-br-[14px] text-[15px] cursor-pointer flex items-center gap-2 transition-all duration-200 hover:border-[#D84315] hover:text-[#D84315]">
