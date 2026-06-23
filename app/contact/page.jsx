@@ -5,7 +5,7 @@ const ORANGE = "#D97634";
 const BG_CREAM = "#FDF6F0";
 
 export const metadata = {
-  title: "Contact Us | Fast Food Restaurant, New Baneshwor",
+  title: "Contact Us | Fast Food Restaurant, New Baneshwor | Mandu Hubs",
   description:
     "Get in touch with Mandu Hubs, fast food & street food restaurant in New Baneshwor, Kathmandu. Call, visit or message us today!",
   keywords: [
