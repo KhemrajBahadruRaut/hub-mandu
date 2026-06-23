@@ -199,14 +199,14 @@ export default function Footer() {
           © {new Date().getFullYear()} Hub Mandu. All rights reserved.{" "}
           <span className="mx-1">|</span>
           <a
-            href="#"
+            href="/terms-of-service"
             className="hover:text-[#D84315] transition-colors duration-200 underline underline-offset-2"
           >
             Terms of Services
           </a>
           <span className="mx-1">|</span>
           <a
-            href="#"
+            href="/privacy-policy"
             className="hover:text-[#D84315] transition-colors duration-200 underline underline-offset-2"
           >
             Privacy Policy
@@ -218,7 +218,7 @@ export default function Footer() {
             <span className="ml-1 text-[#D84315] font-semibold">
               <img
                 src="/logo/GR8-Nepal-Private-Limited-Logo.png"
-                alt=""
+                alt="GR8 Nepal Private Limited"
                 height={20}
                 width={20}
               />

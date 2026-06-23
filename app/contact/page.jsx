@@ -4,12 +4,36 @@ import ContactSection from "./Contact-form";
 const ORANGE = "#D97634";
 const BG_CREAM = "#FDF6F0";
 
+export const metadata = {
+  title: "Contact Us | Fast Food Restaurant, New Baneshwor",
+  description:
+    "Get in touch with Mandu Hubs, fast food & street food restaurant in New Baneshwor, Kathmandu. Call, visit or message us today!",
+  keywords: [
+    "Mandu Hubs",
+    "Restaurant in New Baneshwor",
+    "Fast Food",
+    "Street Food",
+    "Nepali Street Food Restaurant",
+    "Affordable Restaurant In New Baneshwor",
+  ],
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact Us | Mandu Hubs | Fast Food Restaurant, New Baneshwor",
+    description:
+      "Get in touch with Mandu Hubs, fast food & street food restaurant in New Baneshwor, Kathmandu. Call, visit or message us today!",
+    url: "https://mandu.gr8.com.np/contact",
+    type: "website",
+  },
+};
+
 export default function page() {
   const ImgWineGlasses = () => (
     <div className="w-full h-full bg-stone-300 flex items-center justify-center text-stone-500 text-sm">
       <Image
         src="/aboutpage/1.jpg"
-        alt="Wine glasses"
+        alt="Mandu Hubs restaurant interior in New Baneshwor"
         width={500}
         height={500}
         className="h-full w-full object-cover"
@@ -20,7 +44,7 @@ export default function page() {
     <div className="w-full h-full bg-amber-100 flex items-center justify-center text-stone-500 text-sm">
       <Image
         src="/aboutpage/2.jpg"
-        alt="Barista"
+        alt="Mandu Hubs staff preparing fresh food"
         width={500}
         height={500}
         className="h-full w-full object-cover"
@@ -44,10 +68,10 @@ export default function page() {
             </p>
 
             {/* Heading */}
-            <h2 className="text-xl sm:text-4xl font-bold text-stone-800 mb-4 leading-tight">
-              Find <span style={{ color: ORANGE }}>Us</span> &amp; Plan{" "}
-              <span style={{ color: ORANGE }}>Your Visit</span>
-            </h2>
+            <h1 className="text-xl sm:text-4xl font-bold text-stone-800 mb-4 leading-tight">
+              Visit <span style={{ color: ORANGE }}>Mandu</span>{" "}
+              <span style={{ color: ORANGE }}>Hubs</span>
+            </h1>
 
             {/* Description */}
             <p className="text-sm sm:text-lg text-stone-500 leading-relaxed mb-6">

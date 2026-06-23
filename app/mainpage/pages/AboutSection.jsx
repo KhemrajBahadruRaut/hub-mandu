@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AboutUs() {
   return (
     <section className="w-full bg-white py-16 px-6 md:px-16 flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
@@ -62,9 +64,11 @@ export default function AboutUs() {
         </p>
 
         {/* CTA Button */}
-        <button className="border border-[#D84315] text-[#D84315] bg-transparent px-6 py-2 rounded-tl-2xl rounded-br-2xl text-sm font-medium flex items-center gap-2 cursor-pointer hover:bg-[#D84315] hover:text-white transition-all duration-200 hover:-translate-y-0.5">
-          View Our Story <span>→</span>
-        </button>
+        <Link href="/about">
+          <button className="border border-[#D84315] text-[#D84315] bg-transparent px-6 py-2 rounded-tl-2xl rounded-br-2xl text-sm font-medium flex items-center gap-2 cursor-pointer hover:bg-[#D84315] hover:text-white transition-all duration-200 hover:-translate-y-0.5">
+            View Our Story <span>→</span>
+          </button>
+        </Link>
 
       </div>
     </section>

@@ -1,0 +1,6 @@
+# Robots.txt for Mandu Hubs
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://mandu.gr8.com.np/sitemap.xml

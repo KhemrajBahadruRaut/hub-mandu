@@ -41,6 +41,17 @@ export async function generateMetadata({ searchParams }) {
     return {
       title: blog.title,
       description: blog.short_description,
+      keywords: [
+        "Mandu Hubs",
+        "Restaurant in New Baneshwor",
+        "Fast Food",
+        "Street Food",
+        "Nepali Street Food Restaurant",
+        "Affordable Restaurant In New Baneshwor",
+      ],
+      alternates: {
+        canonical: `/blogs/blogdetails?id=${id}`,
+      },
       openGraph: {
         title: blog.title,
         description: blog.short_description,
